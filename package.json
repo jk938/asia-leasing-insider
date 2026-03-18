@@ -1,0 +1,21 @@
+{
+  "name": "asia-leasing-insider",
+  "version": "1.0.0",
+  "description": "Asia Leasing Insider - 亚太区融资租赁行业洞察平台",
+  "scripts": {
+    "fetch": "node scripts/fetch-news.js",
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "rss-parser": "^3.13.0",
+    "xml2js": "^0.6.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

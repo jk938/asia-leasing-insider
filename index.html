@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Leasing Insider | 亚太区融资租赁行业洞察</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1A365D;
+            --primary-light: #2C5282;
+            --accent: #B7791F;
+            --accent-light: #D69E2E;
+            --bg-light: #F7FAFC;
+            --bg-white: #FFFFFF;
+            --text-dark: #1A202C;
+            --text-gray: #4A5568;
+            --text-light: #718096;
+            --border: #E2E8F0;
+            --highlight: #E53E3E;
+            --shadow: 0 4px 20px rgba(26, 54, 93, 0.08);
+            --shadow-hover: 0 8px 30px rgba(26, 54, 93, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .en { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+
+        /* Header */
+        header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .logo-text {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo-text span { color: var(--accent); }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--bg-light);
+            padding: 0.25rem;
+            border-radius: 8px;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 0.875rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            color: var(--text-gray);
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+        }
+
+        .nav-link {
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px 3px 0 0;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0F2942 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #48BB78;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .stat-item { text-align: left; }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .view-all:hover { gap: 0.75rem; }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border);
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .article-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .article-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.3));
+        }
+
+        .article-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 1;
+        }
+
+        .article-content { padding: 1.5rem; }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .article-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            color: var(--primary);
+            background: var(--bg-light);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Featured */
+        .featured-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .featured-main {
+            background: var(--bg-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .featured-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .featured-content { padding: 2rem; }
+
+        .featured-label {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .featured-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .featured-excerpt {
+            font-size: 1rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* Sidebar */
+        .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+
+        .sidebar-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        .quick-link:hover { background: var(--bg-light); }
+
+        .quick-link-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .quick-link:nth-child(2) .quick-link-icon { background: #EBF8FF; }
+        .quick-link:nth-child(3) .quick-link-icon { background: #FEF3E2; }
+        .quick-link:nth-child(4) .quick-link-icon { background: #E6FFFA; }
+        .quick-link:nth-child(5) .quick-link-icon { background: #FAF5FF; }
+
+        .quick-link-text { flex: 1; }
+
+        .quick-link-title { font-weight: 600; font-size: 0.95rem; }
+
+        .quick-link-desc { font-size: 0.8rem; color: var(--text-light); }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, #0F2942 100%);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H22v-2h-2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+
+        .newsletter h3 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .newsletter p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 480px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: var(--accent-light);
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .footer-brand { max-width: 300px; }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .footer-logo-text {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-links { list-style: none; }
+
+        .footer-links li { margin-bottom: 0.6rem; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+
+        .social-links { display: flex; gap: 1rem; }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover { background: var(--accent); }
+
+        /* Loading */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            color: var(--text-gray);
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .featured-section { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+            .article-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .article-card {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .article-card:nth-child(1) { animation-delay: 0.1s; }
+        .article-card:nth-child(2) { animation-delay: 0.15s; }
+        .article-card:nth-child(3) { animation-delay: 0.2s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">ALI</div>
+                <div class="logo-text">Asia Leasing <span>Insider</span></div>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-link active" data-en="Home" data-zh="首页">首页</a>
+            <a href="#weekly" class="nav-link" data-en="Weekly Report" data-zh="行业周报">行业周报</a>
+            <a href="#analysis" class="nav-link" data-en="Market Analysis" data-zh="市场分析">市场分析</a>
+            <a href="#cases" class="nav-link" data-en="Case Studies" data-zh="案例拆解">案例拆解</a>
+            <a href="#regulation" class="nav-link" data-en="Regulation" data-zh="监管动态">监管动态</a>
+            <a href="#about" class="nav-link" data-en="About" data-zh="关于我们">关于我们</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span data-en="Live Updates" data-zh="实时更新">实时更新</span>
+            </div>
+            <h1 data-en="Asia Pacific Equipment Finance & Leasing Insights" data-zh="亚太区设备融资租赁行业洞察">亚太区设备融资租赁行业洞察</h1>
+            <p class="hero-subtitle" data-en="Professional insights for leasing executives, cross-border financing managers, and investors in the Asia-Pacific region." data-zh="为融资租赁公司高管、跨境融资经理及投资人提供专业洞察">为融资租赁公司高管、跨境融资经理及投资人提供专业洞察</p>
+            <div class="hero-stats" id="hero-stats">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Section -->
+        <section class="featured-section">
+            <div class="featured-main" id="featured-article">
+                <!-- Dynamic content -->
+            </div>
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-title" data-en="Quick Access" data-zh="快速入口">快速入口</div>
+                    <a href="#weekly" class="quick-link">
+                        <div class="quick-link-icon">📰</div>
+                        <div class="quick-link-text">
+                            <div class="quick-link-title" data-en="Weekly Report" data-zh="行业周报">行业周报</div>
+                            <div class="quick-link-desc" data-en="Latest deals" data-zh="最新交易">最新交易</div>
+                        </div>
+                    </a>
+                    <a href="#analysis" class="quick-link">
+                        <div class="quick-link-icon">📈</div>
+                        <div class="quick-link-text">
+                            <div class="quick-link-title" data-en="Market Analysis" data-zh="市场分析">市场分析</div>
+                            <div class="quick-link-desc" data-en="Trends & forecasts" data-zh="趋势与预测">趋势与预测</div>
+                        </div>
+                    </a>
+                    <a href="#cases" class="quick-link">
+                        <div class="quick-link-icon">💼</div>
+                        <div class="quick-link-text">
+                            <div class="quick-link-title" data-en="Case Studies" data-zh="案例拆解">案例拆解</div>
+                            <div class="quick-link-desc" data-en="Deal structures" data-zh="交易结构">交易结构</div>
+                        </div>
+                    </a>
+                    <a href="#regulation" class="quick-link">
+                        <div class="quick-link-icon">⚖️</div>
+                        <div class="quick-link-text">
+                            <div class="quick-link-title" data-en="Regulation" data-zh="监管动态">监管动态</div>
+                            <div class="quick-link-desc" data-en="Policy updates" data-zh="政策更新">政策更新</div>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Weekly Report -->
+        <section id="weekly">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Weekly Report" data-zh="行业周报">行业周报</h2>
+                <a href="#" class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a>
+            </div>
+            <div class="article-grid" id="weekly-grid">
+                <div class="loading">加载中...</div>
+            </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section id="analysis">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Market Analysis" data-zh="市场分析">市场分析</h2>
+                <a href="#" class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a>
+            </div>
+            <div class="article-grid" id="analysis-grid">
+                <div class="loading">加载中...</div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="cases">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Case Studies" data-zh="案例拆解">案例拆解</h2>
+                <a href="#" class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a>
+            </div>
+            <div class="article-grid" id="cases-grid">
+                <div class="loading">加载中...</div>
+            </div>
+        </section>
+
+        <!-- Regulatory -->
+        <section id="regulation">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Regulatory Updates" data-zh="监管动态">监管动态</h2>
+                <a href="#" class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a>
+            </div>
+            <div class="article-grid" id="regulation-grid">
+                <div class="loading">加载中...</div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h3 data-en="Subscribe to Our Newsletter" data-zh="订阅我们的周报">订阅我们的周报</h3>
+            <p data-en="Get weekly insights on Asia-Pacific leasing industry delivered to your inbox." data-zh="每周获取亚太区租赁行业洞察，直接发送到您的邮箱。">每周获取亚太区租赁行业洞察，直接发送到您的邮箱。</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" class="newsletter-input" placeholder="Your email address" data-zh-placeholder="您的邮箱地址" required>
+                <button type="submit" class="newsletter-btn" data-en="Subscribe" data-zh="订阅">订阅</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">ALI</div>
+                    <div class="footer-logo-text">Asia Leasing Insider</div>
+                </div>
+                <p class="footer-desc" data-zh="亚太区融资租赁行业领先的专业洞察平台，为行业从业者提供最及时的资讯、最深入的分析和最有价值的商业机会。">亚太区融资租赁行业领先的专业洞察平台，为行业从业者提供最及时的资讯、最深入的分析和最有价值的商业机会。</p>
+            </div>
+            <div>
+                <div class="footer-title" data-en="Content" data-zh="内容">内容</div>
+                <ul class="footer-links">
+                    <li><a href="#" data-en="Weekly Report" data-zh="行业周报">行业周报</a></li>
+                    <li><a href="#" data-en="Market Analysis" data-zh="市场分析">市场分析</a></li>
+                    <li><a href="#" data-en="Case Studies" data-zh="案例拆解">案例拆解</a></li>
+                    <li><a href="#" data-en="Regulatory Updates" data-zh="监管动态">监管动态</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-title" data-en="Company" data-zh="公司">公司</div>
+                <ul class="footer-links">
+                    <li><a href="#" data-en="About Us" data-zh="关于我们">关于我们</a></li>
+                    <li><a href="#" data-en="Contact" data-zh="联系我们">联系我们</a></li>
+                    <li><a href="#" data-en="Advertise" data-zh="广告合作">广告合作</a></li>
+                    <li><a href="#" data-en="Careers" data-zh="加入我们">加入我们</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-title" data-en="Legal" data-zh="法律">法律</div>
+                <ul class="footer-links">
+                    <li><a href="#" data-en="Privacy Policy" data-zh="隐私政策">隐私政策</a></li>
+                    <li><a href="#" data-en="Terms of Service" data-zh="服务条款">服务条款</a></li>
+                    <li><a href="#" data-en="Disclaimer" data-zh="免责声明">免责声明</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 Asia Leasing Insider. All rights reserved.</span>
+            <div class="social-links">
+                <a href="#" class="social-link">𝕏</a>
+                <a href="#" class="social-link">in</a>
+                <a href="#" class="social-link">📱</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let siteData = null;
+        let currentLang = 'zh';
+
+        // Load data from JSON file
+        async function loadData() {
+            try {
+                const response = await fetch('./data/articles.json');
+                siteData = await response.json();
+                renderAll();
+            } catch (err) {
+                console.error('Failed to load data:', err);
+            }
+        }
+
+        function formatDate(dateStr, lang) {
+            const date = new Date(dateStr);
+            if (lang === 'zh') {
+                return date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        function renderAll() {
+            renderHeroStats();
+            renderFeatured();
+            renderArticles();
+        }
+
+        function renderHeroStats() {
+            const container = document.getElementById('hero-stats');
+            const stats = siteData.stats;
+            container.innerHTML = `
+                <div class="stat-item">
+                    <div class="stat-number">${stats.weeklyTransactions}</div>
+                    <div class="stat-label" data-en="Weekly Transactions" data-zh="每周交易">每周交易</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">${stats.marketsCovered}</div>
+                    <div class="stat-label" data-en="Markets Covered" data-zh="覆盖市场">覆盖市场</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">${stats.industryReaders}</div>
+                    <div class="stat-label" data-en="Industry Readers" data-zh="行业读者">行业读者</div>
+                </div>
+            `;
+        }
+
+        function renderFeatured() {
+            const container = document.getElementById('featured-article');
+            const featured = siteData.weekly[0];
+            
+            container.innerHTML = `
+                <div class="featured-image" style="background-image: url('${featured.image}')"></div>
+                <div class="featured-content">
+                    <span class="featured-label" data-en="Featured" data-zh="精选">精选</span>
+                    <h2 class="featured-title">${featured.title[currentLang]}</h2>
+                    <p class="featured-excerpt">${featured.excerpt[currentLang]}</p>
+                </div>
+            `;
+        }
+
+        function renderArticles() {
+            const sections = [
+                { key: 'weekly', gridId: 'weekly-grid' },
+                { key: 'analysis', gridId: 'analysis-grid' },
+                { key: 'cases', gridId: 'cases-grid' },
+                { key: 'regulation', gridId: 'regulation-grid' }
+            ];
+
+            sections.forEach(section => {
+                const grid = document.getElementById(section.gridId);
+                if (!grid || !siteData[section.key]) return;
+
+                grid.innerHTML = siteData[section.key].map(article => `
+                    <article class="article-card">
+                        <div class="article-image" style="background-image: url('${article.image}')">
+                            <span class="article-category">${article.category[currentLang]}</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">📅 ${formatDate(article.date, currentLang)}</span>
+                            </div>
+                            <h3 class="article-title">${article.title[currentLang]}</h3>
+                            <p class="article-excerpt">${article.excerpt[currentLang]}</p>
+                            <div class="article-tags">
+                                ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                    </article>
+                `).join('');
+            });
+        }
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+                el.textContent = el.dataset[lang];
+            });
+
+            document.querySelectorAll('[data-zh-placeholder]').forEach(el => {
+                el.placeholder = el.dataset.zhPlaceholder;
+            });
+
+            if (siteData) renderAll();
+        }
+
+        // Event Listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+        });
+
+        // Initial load
+        loadData();
+    </script>
+</body>
+</html>

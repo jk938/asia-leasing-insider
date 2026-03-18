@@ -1,0 +1,140 @@
+{
+  "site": {
+    "name": "Asia Leasing Insider",
+    "title": "亚太区融资租赁行业洞察",
+    "description": "为融资租赁公司高管、跨境融资经理及投资人提供专业洞察"
+  },
+  "stats": {
+    "weeklyTransactions": "500+",
+    "marketsCovered": "12",
+    "industryReaders": "50K+"
+  },
+  "weekly": [
+    {
+      "id": "w001",
+      "category": { "en": "Weekly", "zh": "周报" },
+      "date": "2024-03-18",
+      "title": { "en": "Weekly Deal Roundup: March 10-16, 2024", "zh": "每周交易回顾：2024年3月10-16日" },
+      "excerpt": { "en": "This week saw $3.2B in new leasing transactions across APAC, with notable deals in Singapore and Hong Kong.", "zh": "本周亚太区新增32亿美元租赁交易，新加坡和香港有重大交易。" },
+      "tags": ["Singapore", "Hong Kong", "Aviation"],
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "w002",
+      "category": { "en": "Weekly", "zh": "周报" },
+      "date": "2024-03-11",
+      "title": { "en": "Weekly Deal Roundup: March 3-9, 2024", "zh": "每周交易回顾：2024年3月3-9日" },
+      "excerpt": { "en": "Cross-border leasing activity surged in Southeast Asia, with Indonesia leading at $850M in equipment finance.", "zh": "东南亚跨境租赁活动激增，印尼以8.5亿美元设备融资领先。" },
+      "tags": ["Indonesia", "Manufacturing", "Energy"],
+      "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "w003",
+      "category": { "en": "Weekly", "zh": "周报" },
+      "date": "2024-03-04",
+      "title": { "en": "Weekly Deal Roundup: Feb 24 - Mar 2, 2024", "zh": "每周交易回顾：2024年2月24日-3月2日" },
+      "excerpt": { "en": "China leasing volumes remained stable while India showed 15% YoY growth in equipment financing.", "zh": "中国租赁量保持稳定，印度设备融资同比增长15%。" },
+      "tags": ["China", "India", "Growth"],
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    }
+  ],
+  "analysis": [
+    {
+      "id": "a001",
+      "category": { "en": "Analysis", "zh": "分析" },
+      "date": "2024-03-15",
+      "title": { "en": "Southeast Asia Equipment Finance Market 2024", "zh": "2024年东南亚设备融资市场" },
+      "excerpt": { "en": "Comprehensive analysis of market trends, key players, and growth drivers across Indonesia, Thailand, Vietnam, and Philippines.", "zh": "全面分析印尼、泰国、越南和菲律宾的市场趋势、主要参与者和增长驱动力。" },
+      "tags": ["Market Report", "Southeast Asia", "Forecast"],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "a002",
+      "category": { "en": "Analysis", "zh": "分析" },
+      "date": "2024-03-10",
+      "title": { "en": "China Green Leasing Trends 2024", "zh": "2024年中国绿色租赁趋势" },
+      "excerpt": { "en": "ESG-linked leases are gaining momentum in China, with solar and wind equipment leading the way.", "zh": "ESG关联租赁在中国蓬勃发展，太阳能和风能设备走在前列。" },
+      "tags": ["ESG", "Green Finance", "China"],
+      "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "a003",
+      "category": { "en": "Analysis", "zh": "分析" },
+      "date": "2024-03-05",
+      "title": { "en": "India Auto Leasing Market Outlook", "zh": "印度汽车租赁市场展望" },
+      "excerpt": { "en": "Fleet operators and OEM captive finance companies are expanding their leasing portfolios rapidly.", "zh": "车队运营商和OEM汽车金融公司正在快速扩展租赁业务。" },
+      "tags": ["Automotive", "India", "Fleet"],
+      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    }
+  ],
+  "cases": [
+    {
+      "id": "c001",
+      "category": { "en": "Case Study", "zh": "案例" },
+      "date": "2024-03-17",
+      "title": { "en": "Cathay Pacific $1.2B Aircraft Lease Restructuring", "zh": "国泰航空12亿美元飞机租赁重组" },
+      "excerpt": { "en": "Deep dive into the complex lease restructuring deal that helped Cathay Pacific navigate post-pandemic challenges.", "zh": "深入分析这笔帮助国泰航空应对后疫情挑战的复杂租赁重组交易。" },
+      "tags": ["Aviation", "Restructuring", "Hong Kong"],
+      "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "c002",
+      "category": { "en": "Case Study", "zh": "案例" },
+      "date": "2024-03-12",
+      "title": { "en": "Grab-Leasing Partners $500M Fleet Deal", "zh": "Grab与租赁合作伙伴5亿美元车队交易" },
+      "excerpt": { "en": "How Grab structured its ride-hailing fleet expansion with multiple leasing partners across Southeast Asia.", "zh": "Grab如何与东南亚多个租赁合作伙伴构建车队扩展交易结构。" },
+      "tags": ["Fintech", "Fleet", "Digital"],
+      "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "c003",
+      "category": { "en": "Case Study", "zh": "案例" },
+      "date": "2024-03-08",
+      "title": { "en": "Keppel Offshore Renewable Energy Leasing", "zh": "Keppel海上可再生能源租赁" },
+      "excerpt": { "en": "A closer look at Singapore Keppel's innovative lease structure for offshore wind farm equipment.", "zh": "详细分析新加坡Keppel针对海上风电设备的创新租赁结构。" },
+      "tags": ["Energy", "Singapore", "Innovation"],
+      "image": "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    }
+  ],
+  "regulation": [
+    {
+      "id": "r001",
+      "category": { "en": "Regulation", "zh": "监管" },
+      "date": "2024-03-16",
+      "title": { "en": "China CBIRC New Leasing Regulations 2024", "zh": "中国银保监会2024年新租赁法规" },
+      "excerpt": { "en": "Key changes in asset classification and capital requirements for financial leasing companies.", "zh": "金融租赁公司资产分类和资本要求的关键变化。" },
+      "tags": ["China", "CBIRC", "Compliance"],
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "r002",
+      "category": { "en": "Regulation", "zh": "监管" },
+      "date": "2024-03-12",
+      "title": { "en": "Singapore MAS Leasing Guidelines Update", "zh": "新加坡金管局租赁指南更新" },
+      "excerpt": { "en": "New prudential requirements for lease accounting and risk management in Singapore.", "zh": "新加坡租赁会计和风险管理的新审慎要求。" },
+      "tags": ["Singapore", "MAS", "Guidelines"],
+      "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    },
+    {
+      "id": "r003",
+      "category": { "en": "Regulation", "zh": "监管" },
+      "date": "2024-03-06",
+      "title": { "en": "Vietnam Central Bank Leasing Policy Changes", "zh": "越南中央银行租赁政策变化" },
+      "excerpt": { "en": "Vietnam introduces new interest rate caps and consumer protection measures for equipment leasing.", "zh": "越南出台设备租赁利率上限和消费者保护新措施。" },
+      "tags": ["Vietnam", "Interest Rate", "Consumer"],
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=400&fit=crop",
+      "source": "Asia Leasing Insider"
+    }
+  ]
+}
