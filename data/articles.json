@@ -2,7 +2,11 @@
   "site": {
     "name": "Asia Leasing Insider",
     "title": "亚太区融资租赁行业洞察",
-    "description": "为融资租赁公司高管、跨境融资经理及投资人提供专业洞察"
+    "description": "为融资租赁公司高管、跨境融资经理及投资人提供专业洞察",
+    "email": "sufehcl@163.com",
+    "copyright": "© 2024 Asia Leasing Insider. All rights reserved.",
+    "disclaimer": "本平台所有内容仅供信息参考，不构成任何投资建议。投资有风险，决策需谨慎。",
+    "sources": "数据来源：Bloomberg, Dealogic, 公司公告, 各国监管机构公开信息"
   },
   "stats": {
     "weeklyTransactions": "500+",
@@ -12,30 +16,63 @@
   "weekly": [
     {
       "id": "w001",
-      "category": { "en": "Weekly", "zh": "周报" },
+      "category": { "en": "Weekly Report", "zh": "行业周报" },
       "date": "2024-03-18",
-      "title": { "en": "Weekly Deal Roundup: March 10-16, 2024", "zh": "每周交易回顾：2024年3月10-16日" },
-      "excerpt": { "en": "This week saw $3.2B in new leasing transactions across APAC, with notable deals in Singapore and Hong Kong.", "zh": "本周亚太区新增32亿美元租赁交易，新加坡和香港有重大交易。" },
+      "author": "Asia Leasing Insider Research Team",
+      "title": { 
+        "en": "Weekly Deal Roundup: March 10-16, 2024", 
+        "zh": "每周交易回顾：2024年3月10-16日" 
+      },
+      "excerpt": { 
+        "en": "This week saw $3.2B in new leasing transactions across APAC, with notable deals in Singapore and Hong Kong.", 
+        "zh": "本周亚太区新增32亿美元租赁交易，新加坡和香港有重大交易。" 
+      },
+      "content": {
+        "en": "<h2>Executive Summary</h2><p>Week 11 of 2024 witnessed robust leasing activity across the Asia-Pacific region, with total transaction volume reaching $3.2 billion. Singapore and Hong Kong led the market, accounting for 45% of total deals.</p><h3>Key Highlights</h3><ul><li><strong>Aviation Sector:</strong> Cathay Pacific completed a $1.2B aircraft lease restructuring with multiple lessors</li><li><strong>Shipping:</strong> Singapore-based shipping companies secured $450M in lease financing for new container vessels</li><li><strong>Manufacturing:</strong> Indonesian equipment financing reached $850M, marking a 23% YoY increase</li></ul><h3>Market Outlook</h3><p>The strong momentum in cross-border leasing is expected to continue into Q2 2024, driven by infrastructure investments in Southeast Asia and the recovery of China's manufacturing sector.</p>",
+        "zh": "<h2>核心摘要</h2><p>2024年第11周，亚太区租赁市场活跃度显著提升，总交易规模达到32亿美元。新加坡和香港市场领跑，贡献了45%的交易份额。</p><h3>重点交易</h3><ul><li><strong>航空领域：</strong>国泰航空完成12亿美元飞机租赁重组，涉及多个租赁方</li><li><strong>航运领域：</strong>新加坡航运公司获得4.5亿美元新造集装箱船租赁融资</li><li><strong>制造领域：</strong>印尼设备融资达到8.85亿美元，同比增长23%</li></ul><h3>市场展望</h3><p>跨境租赁的强劲势头预计将延续至2024年第二季度，主要驱动因素包括东南亚基础设施投资和中国制造业复苏。</p>"
+      },
       "tags": ["Singapore", "Hong Kong", "Aviation"],
       "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
     },
     {
       "id": "w002",
-      "category": { "en": "Weekly", "zh": "周报" },
+      "category": { "en": "Weekly Report", "zh": "行业周报" },
       "date": "2024-03-11",
-      "title": { "en": "Weekly Deal Roundup: March 3-9, 2024", "zh": "每周交易回顾：2024年3月3-9日" },
-      "excerpt": { "en": "Cross-border leasing activity surged in Southeast Asia, with Indonesia leading at $850M in equipment finance.", "zh": "东南亚跨境租赁活动激增，印尼以8.5亿美元设备融资领先。" },
+      "author": "Asia Leasing Insider Research Team",
+      "title": { 
+        "en": "Weekly Deal Roundup: March 3-9, 2024", 
+        "zh": "每周交易回顾：2024年3月3-9日" 
+      },
+      "excerpt": { 
+        "en": "Cross-border leasing activity surged in Southeast Asia, with Indonesia leading at $850M in equipment finance.", 
+        "zh": "东南亚跨境租赁活动激增，印尼以8.5亿美元设备融资领先。" 
+      },
+      "content": {
+        "en": "<h2>Executive Summary</h2><p>Southeast Asia continues to drive APAC leasing growth, with Indonesia emerging as the dominant market. Total weekly volume reached $2.8B.</p><h3>Key Highlights</h3><ul><li><strong>Indonesia:</strong> $850M in equipment financing, primarily for mining and construction equipment</li><li><strong>Vietnam:</strong> $420M in consumer leasing, up 18% from previous week</li><li><strong>Thailand:</strong> $380M in automotive leasing for fleet operators</li></ul><h3>Regional Analysis</h3><p>Indonesia's leasing market is benefiting from government infrastructure spending and growing demand for construction equipment. The country's largest banks are expanding their leasing subsidiaries to capture market share.</p>",
+        "zh": "<h2>核心摘要</h2><p>东南亚持续引领亚太租赁增长，印尼成为主导市场。周交易总额达到28亿美元。</p><h3>重点交易</h3><ul><li><strong>印尼：</strong>8.5亿美元设备融资，主要用于矿山和建筑设备</li><li><strong>越南：</strong>4.2亿美元消费租赁，较上周增长18%</li><li><strong>泰国：</strong>3.8亿美元汽车租赁，面向车队运营商</li></ul><h3>区域分析</h3><p>印尼租赁市场受益于政府基础设施支出和建筑设备需求的增长。该国大型银行正扩张租赁子公司以抢占市场份额。</p>"
+      },
       "tags": ["Indonesia", "Manufacturing", "Energy"],
       "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
     },
     {
       "id": "w003",
-      "category": { "en": "Weekly", "zh": "周报" },
+      "category": { "en": "Weekly Report", "zh": "行业周报" },
       "date": "2024-03-04",
-      "title": { "en": "Weekly Deal Roundup: Feb 24 - Mar 2, 2024", "zh": "每周交易回顾：2024年2月24日-3月2日" },
-      "excerpt": { "en": "China leasing volumes remained stable while India showed 15% YoY growth in equipment financing.", "zh": "中国租赁量保持稳定，印度设备融资同比增长15%。" },
+      "author": "Asia Leasing Insider Research Team",
+      "title": { 
+        "en": "Weekly Deal Roundup: Feb 24 - Mar 2, 2024", 
+        "zh": "每周交易回顾：2024年2月24日-3月2日" 
+      },
+      "excerpt": { 
+        "en": "China leasing volumes remained stable while India showed 15% YoY growth in equipment financing.", 
+        "zh": "中国租赁量保持稳定，印度设备融资同比增长15%。" 
+      },
+      "content": {
+        "en": "<h2>Executive Summary</h2><p>Week 9 showed divergent trends between China and India. While China's leasing market stabilized, India demonstrated strong 15% YoY growth in equipment financing.</p><h3>Key Highlights</h3><ul><li><strong>China:</strong> Total new leasing volume at $1.1B, with green leasing gaining momentum</li><li><strong>India:</strong> $720M in equipment financing, driven by infrastructure and manufacturing</li><li><strong>Australia:</strong> $290M in aircraft leasing for Qantas and Virgin Australia</li></ul><h3>China Market Update</h3><p>Chinese leasing companies are increasingly focusing on green assets, with solar and wind equipment leasing growing at 25% annually. The regulatory environment remains supportive of ESG-linked leasing products.</p>",
+        "zh": "<h2>核心摘要</h2><p>第9周数据显示中印市场分化趋势。中国租赁市场趋稳，印度设备融资同比增长15%。</p><h3>重点交易</h3><ul><li><strong>中国：</strong>新增租赁总量11亿美元，绿色租赁蓬勃发展</li><li><strong>印度：</strong>7.2亿美元设备融资，受基础设施和制造业驱动</li><li><strong>澳大利亚：</strong>2.9亿美元飞机租赁，面向澳航和维珍澳洲</li></ul><h3>中国市场动态</h3><p>中国租赁公司 increasingly focusing on green assets, with solar and wind equipment leasing growing at 25% annually. The regulatory environment remains supportive of ESG-linked leasing products.</p>"
+      },
       "tags": ["China", "India", "Growth"],
       "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
@@ -44,30 +81,63 @@
   "analysis": [
     {
       "id": "a001",
-      "category": { "en": "Analysis", "zh": "分析" },
+      "category": { "en": "Market Analysis", "zh": "市场分析" },
       "date": "2024-03-15",
-      "title": { "en": "Southeast Asia Equipment Finance Market 2024", "zh": "2024年东南亚设备融资市场" },
-      "excerpt": { "en": "Comprehensive analysis of market trends, key players, and growth drivers across Indonesia, Thailand, Vietnam, and Philippines.", "zh": "全面分析印尼、泰国、越南和菲律宾的市场趋势、主要参与者和增长驱动力。" },
+      "author": "Dr. Michael Chen, Chief Analyst",
+      "title": { 
+        "en": "Southeast Asia Equipment Finance Market 2024", 
+        "zh": "2024年东南亚设备融资市场" 
+      },
+      "excerpt": { 
+        "en": "Comprehensive analysis of market trends, key players, and growth drivers across Indonesia, Thailand, Vietnam, and Philippines.", 
+        "zh": "全面分析印尼、泰国、越南和菲律宾的市场趋势、主要参与者和增长驱动力。" 
+      },
+      "content": {
+        "en": "<h2>Market Overview</h2><p>The Southeast Asian equipment finance market is projected to reach $45 billion by 2024 end, representing a 12% growth from 2023. Indonesia leads the region with 35% market share, followed by Thailand (25%) and Vietnam (20%).</p><h2>Key Findings</h2><h3>Indonesia</h3><p>The country's infrastructure development program is driving demand for construction and mining equipment. Key players include Bank BTPN, BCA Finance, and Indonesian leasing subsidiaries of foreign banks.</p><h3>Thailand</h3><p>Automotive leasing dominates, with fleet operators expanding their portfolios. The government's EV promotion policy is creating new opportunities for electric vehicle leasing.</p><h3>Vietnam</h3><p>Fastest-growing market in the region, with 25% YoY growth. Consumer leasing and SME equipment financing are key segments.</p><h2>Outlook</h2><p>We expect continued strong growth through 2025, supported by infrastructure investments and manufacturing relocation from China.</p>",
+        "zh": "<h2>市场概况</h2><p>东南亚设备融资市场预计到2024年底达到450亿美元，较2023年增长12%。印尼以35%的市场份额领先，其次是泰国(25%)和越南(20%)。</p><h2>关键发现</h2><h3>印尼</h3><p>该国基础设施发展计划推动建筑和采矿设备需求增长。主要参与者包括Bank BTPN、BCA Finance及外资银行在印尼的租赁子公司。</p><h3>泰国</h3><p>汽车租赁占主导地位，车队运营商正在扩展业务。政府推广电动汽车的政策为电动车租赁创造新机遇。</p><h3>越南</h3><p>该地区增长最快的市场，同比增长25%。消费租赁和中小企业设备融资是主要细分领域。</p><h2>展望</h2><p>在基础设施投资和制造业从中国转移的支撑下，我们预计市场将持续强劲增长至2025年。</p>"
+      },
       "tags": ["Market Report", "Southeast Asia", "Forecast"],
       "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
     },
     {
       "id": "a002",
-      "category": { "en": "Analysis", "zh": "分析" },
+      "category": { "en": "Market Analysis", "zh": "市场分析" },
       "date": "2024-03-10",
-      "title": { "en": "China Green Leasing Trends 2024", "zh": "2024年中国绿色租赁趋势" },
-      "excerpt": { "en": "ESG-linked leases are gaining momentum in China, with solar and wind equipment leading the way.", "zh": "ESG关联租赁在中国蓬勃发展，太阳能和风能设备走在前列。" },
+      "author": "Sarah Zhang, Senior Analyst",
+      "title": { 
+        "en": "China Green Leasing Trends 2024", 
+        "zh": "2024年中国绿色租赁趋势" 
+      },
+      "excerpt": { 
+        "en": "ESG-linked leases are gaining momentum in China, with solar and wind equipment leading the way.", 
+        "zh": "ESG关联租赁在中国蓬勃发展，太阳能和风能设备走在前列。" 
+      },
+      "content": {
+        "en": "<h2>Green Leasing Revolution</h2><p>China's green leasing market has grown to $28 billion, representing 18% of total equipment leasing volume. Solar and wind equipment lead the segment, followed by electric vehicles and energy storage systems.</p><h2>Regulatory Framework</h2><p>The China Banking and Insurance Regulatory Commission (CBIRC) has introduced preferential capital requirements for green leasing, encouraging financial institutions to expand their green asset portfolios.</p><h2>Key Players</h2><ul><li><strong>China Everbright Leasing:</strong> Leading green leasing provider with $4.2B portfolio</li><li><strong>CMFL Leasing:</strong> Focus on renewable energy equipment</li><li><strong>Jiangsu Leasing:</strong> EV and charging infrastructure specialist</li></ul><h2>Market Outlook</h2><p>We project green leasing to reach 30% of total market by 2026, driven by China's carbon neutrality goals and supportive regulatory policies.</p>",
+        "zh": "<h2>绿色租赁革命</h2><p>中国绿色租赁市场已增长至280亿美元，占设备租赁总量的18%。太阳能和风能设备领先，其次是电动汽车和储能系统。</p><h2>监管框架</h2><p>中国银保监会已推出绿色租赁优惠资本要求，鼓励金融机构扩大绿色资产组合。</p><h2>主要参与者</h2><ul><li><strong>光大租赁：</strong>领先的绿色租赁提供商，资产组合42亿美元</li><li><strong>中煤租赁：</strong>专注可再生能源设备</li><li><strong>江苏租赁：</strong>电动汽车和充电基础设施专业服务商</li></ul><h2>市场展望</h2><p>我们预计绿色租赁到2026年将达到市场总量的30%，中国碳中和目标和支持性监管政策是主要驱动因素。</p>"
+      },
       "tags": ["ESG", "Green Finance", "China"],
       "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
     },
     {
       "id": "a003",
-      "category": { "en": "Analysis", "zh": "分析" },
+      "category": { "en": "Market Analysis", "zh": "市场分析" },
       "date": "2024-03-05",
-      "title": { "en": "India Auto Leasing Market Outlook", "zh": "印度汽车租赁市场展望" },
-      "excerpt": { "en": "Fleet operators and OEM captive finance companies are expanding their leasing portfolios rapidly.", "zh": "车队运营商和OEM汽车金融公司正在快速扩展租赁业务。" },
+      "author": "Raj Patel, India Market Specialist",
+      "title": { 
+        "en": "India Auto Leasing Market Outlook", 
+        "zh": "印度汽车租赁市场展望" 
+      },
+      "excerpt": { 
+        "en": "Fleet operators and OEM captive finance companies are expanding their leasing portfolios rapidly.", 
+        "zh": "车队运营商和OEM汽车金融公司正在快速扩展租赁业务。" 
+      },
+      "content": {
+        "en": "<h2>Market Dynamics</h2><p>The Indian auto leasing market is experiencing rapid growth, with total portfolio reaching $12 billion in 2024. Commercial vehicle leasing leads the segment, followed by passenger vehicles.</p><h2>Key Drivers</h2><ul><li><strong>Tax Benefits:</strong> Commercial vehicle leasing enjoys significant tax advantages under Indian income tax laws</li><li><strong>Technology:</strong> Fleet management technology is reducing operational costs and improving asset utilization</li><li><strong>EV Transition:</strong> Government incentives are driving electric vehicle adoption in commercial fleets</li></ul><h2>Major Players</h2><p>Major banks and NBFCs dominate the market, with standalone leasing companies gaining market share. Key players include HDFC Bank, Axis Bank, and specialized lessors like Wheels India.</p><h2>Outlook</h2><p>We expect 20% annual growth through 2026, with EV leasing emerging as the fastest-growing segment.</p>",
+        "zh": "<h2>市场动态</h2><p>印度汽车租赁市场快速增长，2024年资产组合达到120亿美元。商用车租赁领先，其次是乘用车。</p><h2>主要驱动因素</h2><ul><li><strong>税收优惠：</strong>商用车租赁在印度所得税法下享有显著税收优势</li><li><strong>技术：</strong>车队管理技术正在降低运营成本并提高资产利用率</li><li><strong>电动汽车转型：</strong>政府激励措施正在推动商业车队采用电动汽车</li></ul><h2>主要参与者</h2><p>大型银行和NBFC主导市场，独立租赁公司正在 gaining market share. 主要参与者包括HDFC Bank、Axis Bank及Wheels India等专业租赁商。</p><h2>展望</h2><p>我们预计到2026年年增长20%，电动汽车租赁将成为增长最快的细分领域。</p>"
+      },
       "tags": ["Automotive", "India", "Fleet"],
       "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
@@ -76,30 +146,63 @@
   "cases": [
     {
       "id": "c001",
-      "category": { "en": "Case Study", "zh": "案例" },
+      "category": { "en": "Case Study", "zh": "案例拆解" },
       "date": "2024-03-17",
-      "title": { "en": "Cathay Pacific $1.2B Aircraft Lease Restructuring", "zh": "国泰航空12亿美元飞机租赁重组" },
-      "excerpt": { "en": "Deep dive into the complex lease restructuring deal that helped Cathay Pacific navigate post-pandemic challenges.", "zh": "深入分析这笔帮助国泰航空应对后疫情挑战的复杂租赁重组交易。" },
+      "author": "Jennifer Wu, Deal Analyst",
+      "title": { 
+        "en": "Cathay Pacific $1.2B Aircraft Lease Restructuring", 
+        "zh": "国泰航空12亿美元飞机租赁重组" 
+      },
+      "excerpt": { 
+        "en": "Deep dive into the complex lease restructuring deal that helped Cathay Pacific navigate post-pandemic challenges.", 
+        "zh": "深入分析这笔帮助国泰航空应对后疫情挑战的复杂租赁重组交易。" 
+      },
+      "content": {
+        "en": "<h2>Deal Overview</h2><p>Cathay Pacific's $1.2 billion aircraft lease restructuring represents one of the most significant aviation financing transactions in Asia Pacific this year. The deal involved 35 aircraft across multiple lessors.</p><h2>Transaction Structure</h2><h3>Pre-Restructuring</h3><ul><li>56 aircraft on operating leases</li><li>Average lease rate 15% above market</li><li>Lease expiry profile heavily weighted to 2024-2025</li></ul><h3>Post-Restructuring</h3><ul><li>Extended lease terms by 3-5 years</li><li>Reduced lease rates by 12%</li><li>Converted 8 aircraft from operating to finance leases</li></ul><h2>Key Negotiating Points</h2><ol><li><strong>Lease Rate Concessions:</strong> Lessors agreed to rate reductions in exchange for extended lease terms</li><li><strong>Security Deposits:</strong> Reduced security deposit requirements freed up $120M in liquidity</li><li><strong>Maintenance Reserves:</strong> Restructured maintenance reserve accounts with adjusted payment schedules</li></ol><h2>Lessons Learned</h2><p>The deal demonstrates the importance of proactive lease portfolio management and the value of maintaining strong relationships with lessors during market downturns.</p>",
+        "zh": "<h2>交易概述</h2><p>国泰航空12亿美元飞机租赁重组是今年亚太区最重要的航空融资交易之一。该交易涉及35架飞机，多个租赁方参与。</p><h2>交易结构</h2><h3>重组前</h3><ul><li>56架飞机以经营租赁方式持有</li><li>平均租赁费率高于市场15%</li><li>租赁到期日集中在2024-2025年</li></ul><h3>重组后</h3><ul><li>租赁期限延长3-5年</li><li>租赁费率降低12%</li><li>8架飞机从经营租赁转为融资租赁</li></ul><h2>关键谈判要点</h2><ol><li><strong>租赁费率让步：</strong>租赁方同意以降费换取延长租期</li><li><strong>保证金：</strong>降低保证金要求释放1.2亿美元流动资金</li><li><strong>维修储备金：</strong>重组维修储备金账户，调整付款计划</li></ol><h2>经验教训</h2><p>该交易表明主动租赁组合管理的重要性，以及在市场低迷时与租赁方保持良好关系的价值。</p>"
+      },
       "tags": ["Aviation", "Restructuring", "Hong Kong"],
       "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
     },
     {
       "id": "c002",
-      "category": { "en": "Case Study", "zh": "案例" },
+      "category": { "en": "Case Study", "zh": "案例拆解" },
       "date": "2024-03-12",
-      "title": { "en": "Grab-Leasing Partners $500M Fleet Deal", "zh": "Grab与租赁合作伙伴5亿美元车队交易" },
-      "excerpt": { "en": "How Grab structured its ride-hailing fleet expansion with multiple leasing partners across Southeast Asia.", "zh": "Grab如何与东南亚多个租赁合作伙伴构建车队扩展交易结构。" },
+      "author": "David Tan, Fintech Analyst",
+      "title": { 
+        "en": "Grab-Leasing Partners $500M Fleet Deal", 
+        "zh": "Grab与租赁合作伙伴5亿美元车队交易" 
+      },
+      "excerpt": { 
+        "en": "How Grab structured its ride-hailing fleet expansion with multiple leasing partners across Southeast Asia.", 
+        "zh": "Grab如何与东南亚多个租赁合作伙伴构建车队扩展交易结构。" 
+      },
+      "content": {
+        "en": "<h2>Deal Overview</h2><p>Grab's $500 million fleet leasing deal represents the largest ride-hailing fleet financing transaction in Southeast Asia. The deal was structured across five countries with eight different leasing partners.</p><h2>Multi-Country Structure</h2><table border='1' cellpadding='5'><tr><th>Country</th><th>Amount</th><th>Partners</th></tr><tr><td>Indonesia</td><td>$180M</td><td>BCA Finance, Bank BTPN</td></tr><tr><td>Thailand</td><td>$120M</td><td>Krungsri Auto, Siam City Bank</td></tr><tr><td>Singapore</td><td>$80M</td><td>Hong Leong Finance</td></tr><tr><td>Vietnam</td><td>$70M</td><td>Techcombank, VPBank</td></tr><tr><td>Philippines</td><td>$50M</td><td>BDO Unibank</td></tr></table><h2>Innovation Elements</h2><ul><li><strong>Dynamic Lease Rates:</strong> Rates tied to vehicle utilization metrics</li><li><strong>Insurance Integration:</strong> Bundled insurance with lease payments</li><li><strong>Driver Loyalty Program:</strong> Lease tenure linked to driver performance</li></ul><h2>Strategic Value</h2><p>This deal enabled Grab to rapidly expand its driver fleet while minimizing capital expenditure. The multi-partner structure reduced concentration risk and provided competitive pricing pressure.</p>",
+        "zh": "<h2>交易概述</h2><p>Grab的5亿美元车队租赁交易是东南亚最大的网约车车队融资交易。该交易在五个国家与八个不同租赁合作伙伴构建。</p><h2>多国结构</h2><table border='1' cellpadding='5'><tr><th>国家</th><th>金额</th><th>合作伙伴</th></tr><tr><td>印尼</td><td>1.8亿美元</td><td>BCA Finance, Bank BTPN</td></tr><tr><td>泰国</td><td>1.2亿美元</td><td>Krungsri Auto, Siam City Bank</td></tr><tr><td>新加坡</td><td>8000万美元</td><td>Hong Leong Finance</td></tr><tr><td>越南</td><td>7000万美元</td><td>Techcombank, VPBank</td></tr><tr><td>菲律宾</td><td>5000万美元</td><td>BDO Unibank</td></tr></table><h2>创新元素</h2><ul><li><strong>动态租赁费率：</strong>费率与车辆利用率挂钩</li><li><strong>保险整合：</strong>将保险与租赁付款捆绑</li><li><strong>司机忠诚计划：</strong>租赁期限与司机表现挂钩</li></ul><h2>战略价值</h2><p>该交易使Grab能够快速扩展司机车队，同时将资本支出最小化。多合作伙伴结构降低了集中风险，并提供了竞争性定价压力。</p>"
+      },
       "tags": ["Fintech", "Fleet", "Digital"],
       "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
     },
     {
       "id": "c003",
-      "category": { "en": "Case Study", "zh": "案例" },
+      "category": { "en": "Case Study", "zh": "案例拆解" },
       "date": "2024-03-08",
-      "title": { "en": "Keppel Offshore Renewable Energy Leasing", "zh": "Keppel海上可再生能源租赁" },
-      "excerpt": { "en": "A closer look at Singapore Keppel's innovative lease structure for offshore wind farm equipment.", "zh": "详细分析新加坡Keppel针对海上风电设备的创新租赁结构。" },
+      "author": "Dr. Lisa Wang, Energy Sector Analyst",
+      "title": { 
+        "en": "Keppel Offshore Renewable Energy Leasing", 
+        "zh": "Keppel海上可再生能源租赁" 
+      },
+      "excerpt": { 
+        "en": "A closer look at Singapore Keppel's innovative lease structure for offshore wind farm equipment.", 
+        "zh": "详细分析新加坡Keppel针对海上风电设备的创新租赁结构。" 
+      },
+      "content": {
+        "en": "<h2>Deal Overview</h2><p>Keppel Corporation's $320 million lease facility for offshore wind farm equipment represents a landmark transaction in Southeast Asia's renewable energy financing landscape.</p><h2>Asset Portfolio</h2><ul><li>15 Wind Turbine Generators (WTGs) - 8MW each</li><li>Offshore substations and transition pieces</li><li>Cable infrastructure for power transmission</li></ul><h2>Financing Structure</h2><p>The lease facility was structured as a 15-year operating lease with the following innovative features:</p><ul><li><strong>Step-Up Rental Structure:</strong> Rental payments increase over the lease term to match projected revenue from power sales</li><li><strong>Put/Call Options:</strong> Asset transfer options at predetermined prices at lease end</li><li><strong>COVE Insurance:</strong> Political and currency risk insurance for cross-border structure</li></ul><h2>Risk Mitigation</h2><ul><li>Long-term power purchase agreement (PPA) with Singapore's national utility</li><li>Take-or-pay structure for minimum revenue guarantees</li><li>Asset location in favorable jurisdictions</li></ul><h2>Market Impact</h2><p>This transaction sets a new benchmark for offshore wind equipment leasing in Asia Pacific and demonstrates the viability of complex lease structures for renewable energy projects.</p>",
+        "zh": "<h2>交易概述</h2><p>Keppel Corporation旗下3.2亿美元海上风电设备租赁融资是东南亚可再生能源融资领域的标志性交易。</p><h2>资产组合</h2><ul><li>15台风力发电机 - 每台8兆瓦</li><li>海上变电站和过渡段</li><li>电力传输电缆基础设施</li></ul><h2>融资结构</h2><p>该租赁融资被构建为15年经营租赁，具有以下创新特点：</p><ul><li><strong>递增租金结构：</strong>租金随租期增加，与预计售电收入匹配</li><li><strong>看跌/看涨期权：</strong>租期末以预定价格进行资产转移的期权</li><li><strong>COVE保险：</strong>跨境结构的政治和货币风险保险</li></ul><h2>风险缓释</h2><ul><li>与新加坡国家公用事业公司的长期购电协议(PPA)</li><li>最低收入保证的照付不议结构</li><li>资产位于有利的司法管辖区</li></ul><h2>市场影响</h2><p>该交易为亚太区海上风电设备租赁设定了新基准，并证明了复杂租赁结构在可再生能源项目中的可行性。</p>"
+      },
       "tags": ["Energy", "Singapore", "Innovation"],
       "image": "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&h=400&fit=crop",
       "source": "Asia Leasing Insider"
@@ -108,33 +211,66 @@
   "regulation": [
     {
       "id": "r001",
-      "category": { "en": "Regulation", "zh": "监管" },
+      "category": { "en": "Regulatory Updates", "zh": "监管动态" },
       "date": "2024-03-16",
-      "title": { "en": "China CBIRC New Leasing Regulations 2024", "zh": "中国银保监会2024年新租赁法规" },
-      "excerpt": { "en": "Key changes in asset classification and capital requirements for financial leasing companies.", "zh": "金融租赁公司资产分类和资本要求的关键变化。" },
+      "author": "Legal & Compliance Team",
+      "title": { 
+        "en": "China CBIRC New Leasing Regulations 2024", 
+        "zh": "中国银保监会2024年新租赁法规" 
+      },
+      "excerpt": { 
+        "en": "Key changes in asset classification and capital requirements for financial leasing companies.", 
+        "zh": "金融租赁公司资产分类和资本要求的关键变化。" 
+      },
+      "content": {
+        "en": "<h2>Regulatory Overview</h2><p>The China Banking and Insurance Regulatory Commission (CBIRC) issued new regulations on March 15, 2024, introducing significant changes to the financial leasing industry.</p><h2>Key Changes</h2><h3>1. Asset Classification</h3><p>New five-tier classification system replacing the previous three-tier approach:</p><ul><li>Normal</li><li>Special Mention</li><li>Substandard</li><li>Doubtful</li><li>Loss</li></ul><h3>2. Capital Requirements</h3><ul><li>Minimum registered capital increased from RMB 100M to RMB 500M for new entrants</li><li>Risk-weighted asset calculations now include counterparty credit risk</li><li>Leverage ratio capped at 10x for most leasing activities</li></ul><h3>3. Concentration Limits</h3><ul><li>Single lessee concentration limit reduced from 30% to 20% of capital</li><li>Related party transactions limited to 30% of capital</li></ul><h2>Implementation Timeline</h2><p>Companies have 12 months to comply with new asset classification standards and 18 months for capital requirements.</p><h2>Impact Assessment</h2><p>The new regulations will accelerate industry consolidation, as smaller players may struggle to meet increased capital requirements.</p>",
+        "zh": "<h2>监管概览</h3><p>中国银保监会于2024年3月15日发布新法规，对金融租赁行业引入重大变更。</p><h2>主要变化</h2><h3>1. 资产分类</h3><p>新五级分类系统取代之前的三级分类：</p><ul><li>正常类</li><li>关注类</li><li>次级类</li><li>可疑类</li><li>损失类</li></ul><h3>2. 资本要求</h3><ul><li>新进入者最低注册资本从1亿元人民币提高到5亿元人民币</li><li>风险加权资产计算现在包括交易对手信用风险</li><li>大多数租赁活动的杠杆率上限为10倍</li></ul><h3>3. 集中度限制</h3><ul><li>单一承租人集中度限制从30%降至20%</li><li>关联交易限制为资本的30%</li></ul><h2>实施时间表</h2><p>企业有12个月时间符合新资产分类标准，18个月符合资本要求。</p><h2>影响评估</h2><p>新法规将加速行业整合，因为较小参与者可能难以满足提高的资本要求。</p>"
+      },
       "tags": ["China", "CBIRC", "Compliance"],
       "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=400&fit=crop",
-      "source": "Asia Leasing Insider"
+      "source": "China Banking and Insurance Regulatory Commission"
     },
     {
       "id": "r002",
-      "category": { "en": "Regulation", "zh": "监管" },
+      "category": { "en": "Regulatory Updates", "zh": "监管动态" },
       "date": "2024-03-12",
-      "title": { "en": "Singapore MAS Leasing Guidelines Update", "zh": "新加坡金管局租赁指南更新" },
-      "excerpt": { "en": "New prudential requirements for lease accounting and risk management in Singapore.", "zh": "新加坡租赁会计和风险管理的新审慎要求。" },
+      "author": "Legal & Compliance Team",
+      "title": { 
+        "en": "Singapore MAS Leasing Guidelines Update", 
+        "zh": "新加坡金管局租赁指南更新" 
+      },
+      "excerpt": { 
+        "en": "New prudential requirements for lease accounting and risk management in Singapore.", 
+        "zh": "新加坡租赁会计和风险管理的新审慎要求。" 
+      },
+      "content": {
+        "en": "<h2>Regulatory Update</h2><p>The Monetary Authority of Singapore (MAS) has updated its leasing guidelines effective March 1, 2024, introducing enhanced prudential requirements.</p><h2>Key Changes</h2><h3>Lease Accounting</h3><ul><li>Enhanced disclosure requirements for lessors</li><li>Standardized impairment calculation methodology</li><li>要求租赁公司建立租赁资产估值模型</li></ul><h3>Risk Management</h3><ul><li>Minimum capital adequacy ratio of 12% for leasing subsidiaries</li><li>Stress testing requirements for portfolio concentration</li><li>Enhanced due diligence for cross-border lessees</li></ul><h3>Governance</h3><ul><li>Board-level oversight committee for leasing operations</li><li>Minimum independent director requirements</li><li>Internal audit frequency increased to quarterly</li></ul><h2>Compliance Timeline</h2><p>Financial institutions have 6 months to implement the new guidelines.</p><h2>Industry Response</h2><p>The Singapore Leasing Association has welcomed the regulations, noting they will enhance industry credibility and attract more institutional investors to the leasing sector.</p>",
+        "zh": "<h2>监管更新</h2><p>新加坡金管局(MAS)于2024年3月1日更新租赁指南，引入增强的审慎要求。</p><h2>主要变化</h2><h3>租赁会计</h3><ul><li>增强租赁方披露要求</li><li>标准化减值计算方法</li><li>要求租赁公司建立租赁资产估值模型</li></ul><h3>风险管理</h3><ul><li>租赁子公司最低资本充足率12%</li><li>投资组合集中度压力测试要求</li><li>增强跨境承租人尽职调查</li></ul><h3>治理</h3><ul><li>董事会层面租赁业务监督委员会</li><li>最低独立董事要求</li><li>内部审计频率提高至季度</li></ul><h2>合规时间表</h2><p>金融机构有6个月时间实施新指南。</p><h2>行业反应</h2><p>新加坡租赁协会对这些规定表示欢迎，指出它们将增强行业信誉，并吸引更多机构投资者进入租赁领域。</p>"
+      },
       "tags": ["Singapore", "MAS", "Guidelines"],
       "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&h=400&fit=crop",
-      "source": "Asia Leasing Insider"
+      "source": "Monetary Authority of Singapore"
     },
     {
       "id": "r003",
-      "category": { "en": "Regulation", "zh": "监管" },
+      "category": { "en": "Regulatory Updates", "zh": "监管动态" },
       "date": "2024-03-06",
-      "title": { "en": "Vietnam Central Bank Leasing Policy Changes", "zh": "越南中央银行租赁政策变化" },
-      "excerpt": { "en": "Vietnam introduces new interest rate caps and consumer protection measures for equipment leasing.", "zh": "越南出台设备租赁利率上限和消费者保护新措施。" },
+      "author": "Legal & Compliance Team",
+      "title": { 
+        "en": "Vietnam Central Bank Leasing Policy Changes", 
+        "zh": "越南中央银行租赁政策变化" 
+      },
+      "excerpt": { 
+        "en": "Vietnam introduces new interest rate caps and consumer protection measures for equipment leasing.", 
+        "zh": "越南出台设备租赁利率上限和消费者保护新措施。" 
+      },
+      "content": {
+        "en": "<h2>Policy Overview</h2><p>The State Bank of Vietnam (SBV) has announced new regulations for the equipment leasing industry, effective April 1, 2024.</p><h2>Key Changes</h2><h3>Interest Rate Caps</h3><ul><li>Maximum effective interest rate capped at 20% per annum for consumer leasing</li><li>Equipment financing for businesses capped at 15% per annum</li><li>Rate calculation methodology standardized across all lenders</li></ul><h3>Consumer Protection</h3><ul><li>Mandatory cooling-off period of 48 hours for lease contracts</li><li>Enhanced disclosure of total cost of leasing</li><li>Prohibition of hidden fees and charges</li></ul><h3>Licensing Requirements</h3><ul><li>Minimum charter capital of VND 50 billion (~$2M) for new leasing companies</li><li>Stricter fitness and propriety criteria for shareholders</li><li>Enhanced reporting requirements to the central bank</li></ul><h2>Market Impact</h3><p>The new regulations are expected to:</p><ul><li>Reduce predatory lending practices</li><li>Increase consolidation in the leasing industry</li><li>Improve transparency and consumer confidence</li></ul><h2>Transition Period</h2><p>Existing companies have 12 months to meet new capital requirements.</p>",
+        "zh": "<h2>政策概览</h2><p>越南国家银行(SBV)宣布了设备租赁行业新规定，于2024年4月1日生效。</p><h2>主要变化</h2><h3>利率上限</h3><ul><li>消费租赁最高有效利率 cap at 20% per annum</li><li>企业设备融资上限为年利率15%</li><li>所有贷款机构统一利率计算方法</li></ul><h3>消费者保护</h3><ul><li>租赁合同强制48小时冷静期</li><li>增强租赁总成本披露</li><li>禁止隐藏费用</li></ul><h3>牌照要求</h3><ul><li>新租赁公司最低 charter capital 为500亿越南盾(约200万美元)</li><li>股东更严格的适任性标准</li><li>增强向央行报告要求</li></ul><h2>市场影响</h2><p>新规定预计将：</p><ul><li>减少掠夺性贷款行为</li><li>加速租赁行业整合</li><li>提高透明度和消费者信心</li></ul><h2>过渡期</h2><p>现有公司有12个月时间满足新资本要求。</p>"
+      },
       "tags": ["Vietnam", "Interest Rate", "Consumer"],
       "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=400&fit=crop",
-      "source": "Asia Leasing Insider"
+      "source": "State Bank of Vietnam"
     }
   ]
 }
