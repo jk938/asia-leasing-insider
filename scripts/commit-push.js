@@ -1,11 +1,13 @@
 const { execSync } = require('child_process');
-const projectDir = 'c:/Users/Jackie/WorkBuddy/20260318114807';
+const path = require('path');
+
+const repoDir = path.resolve(__dirname, '..');
 
 try {
-  execSync('git add -A', { cwd: projectDir, stdio: 'inherit' });
-  execSync('git commit -m "Fix: include all files in deployment"', { cwd: projectDir, stdio: 'inherit' });
-  execSync('git push origin main', { cwd: projectDir, stdio: 'inherit' });
-  console.log('Pushed!');
-} catch (err) {
-  console.error(err.message);
+  execSync('git add -A', { cwd: repoDir, stdio: 'inherit' });
+  execSync('git commit -m "Fix vercel routing config"', { cwd: repoDir, stdio: 'inherit' });
+  execSync('git push origin main', { cwd: repoDir, stdio: 'inherit' });
+  console.log('Done!');
+} catch (e) {
+  console.error(e.message);
 }

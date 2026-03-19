@@ -1,6 +1,9 @@
 {
-  "buildCommand": "echo done",
   "outputDirectory": ".",
-  "cleanUrls": true,
-  "trailingSlash": false
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
 }
