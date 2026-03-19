@@ -34,10 +34,9 @@
         .logo-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.1rem; }
         .logo-text { font-family: 'Noto Serif SC', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); }
         .logo-text span { color: var(--accent); }
-        .header-contact { display: flex; align-items: center; gap: 1rem; }
-        .header-email { color: var(--text-gray); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
-        .header-email a { color: var(--accent); text-decoration: none; }
-        .header-email a:hover { text-decoration: underline; }
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        .subscribe-btn { background: var(--accent); color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .subscribe-btn:hover { background: var(--accent-light); }
         .lang-switch { display: flex; gap: 0.5rem; background: var(--bg-light); padding: 0.25rem; border-radius: 8px; }
         .lang-btn { padding: 0.5rem 1rem; border: none; background: transparent; cursor: pointer; font-size: 0.875rem; border-radius: 6px; transition: all 0.3s ease; color: var(--text-gray); }
         .lang-btn.active { background: var(--primary); color: white; }
@@ -57,7 +56,7 @@
         .hero-badge::before { content: ''; width: 8px; height: 8px; background: #48BB78; border-radius: 50%; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .hero h1 { font-family: 'Noto Serif SC', serif; font-size: 3rem; font-weight: 700; color: white; margin-bottom: 1rem; line-height: 1.3; }
-        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.8); max-width: 600px; margin-bottom: 2rem; }
+        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.8); max-width: 700px; margin-bottom: 2rem; }
         .hero-stats { display: flex; gap: 3rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
         .stat-item { text-align: left; }
         .stat-number { font-size: 2rem; font-weight: 700; color: var(--accent); }
@@ -77,7 +76,9 @@
         .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
         .article-image { height: 180px; background-size: cover; background-position: center; position: relative; }
         .article-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, rgba(0,0,0,0.3)); }
-        .article-category { position: absolute; top: 1rem; left: 1rem; background: var(--accent); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; z-index: 1; }
+        .article-badge { position: absolute; top: 1rem; left: 1rem; display: flex; gap: 0.5rem; z-index: 1; }
+        .article-category { background: var(--accent); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .article-premium { background: var(--primary); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
         .article-content { padding: 1.5rem; }
         .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.75rem; }
         .article-date { display: flex; align-items: center; gap: 0.35rem; }
@@ -111,6 +112,28 @@
         .quick-link-title { font-weight: 600; font-size: 0.95rem; }
         .quick-link-desc { font-size: 0.8rem; color: var(--text-light); }
         
+        /* Subscription Section */
+        .subscription-section { background: linear-gradient(135deg, var(--primary) 0%, #0F2942 100%); border-radius: 24px; padding: 3rem; margin-bottom: 3rem; position: relative; overflow: hidden; }
+        .subscription-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H22v-2h-2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"); opacity: 0.6; }
+        .subscription-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .subscription-info h3 { font-family: 'Noto Serif SC', serif; font-size: 1.75rem; color: white; margin-bottom: 0.75rem; }
+        .subscription-info p { color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; }
+        .subscription-features { list-style: none; }
+        .subscription-features li { color: rgba(255,255,255,0.9); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .subscription-features li::before { content: '✓'; color: var(--accent-light); font-weight: bold; }
+        .subscription-plans { display: flex; gap: 1rem; }
+        .subscription-plan { flex: 1; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; }
+        .subscription-plan:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+        .subscription-plan.featured { background: var(--accent); border-color: var(--accent); }
+        .plan-name { font-size: 1rem; color: white; font-weight: 600; margin-bottom: 0.5rem; }
+        .plan-price { font-size: 1.75rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+        .plan-desc { font-size: 0.8rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+        .plan-btn { width: 100%; padding: 0.75rem; border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .plan-btn-free { background: transparent; border: 2px solid white; color: white; }
+        .plan-btn-free:hover { background: white; color: var(--primary); }
+        .plan-btn-pro { background: white; color: var(--accent); }
+        .plan-btn-pro:hover { background: var(--primary-light); color: white; }
+        
         /* Newsletter */
         .newsletter { background: linear-gradient(135deg, var(--primary) 0%, #0F2942 100%); border-radius: 24px; padding: 3rem; text-align: center; margin-bottom: 3rem; position: relative; overflow: hidden; }
         .newsletter::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H22v-2h-2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"); opacity: 0.6; }
@@ -136,7 +159,7 @@
         .footer-title { font-weight: 600; margin-bottom: 1rem; font-size: 1rem; }
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 0.6rem; }
-        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: all 0.3s ease; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: all 0.3s ease; cursor: pointer; }
         .footer-links a:hover { color: white; }
         .footer-bottom { max-width: 1400px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.6); font-size: 0.85rem; flex-wrap: wrap; gap: 1rem; }
         .footer-disclaimer { font-size: 0.75rem; color: rgba(255,255,255,0.5); max-width: 600px; }
@@ -166,12 +189,28 @@
         .article-detail-content th { background: var(--bg-light); font-weight: 600; }
         .article-detail-source { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-light); }
         .article-detail-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .article-paywall { background: var(--bg-light); border-radius: 16px; padding: 2rem; text-align: center; margin: 2rem 0; }
+        .article-paywall h3 { color: var(--primary); margin-bottom: 1rem; }
+        .article-paywall p { color: var(--text-gray); margin-bottom: 1.5rem; }
+        
+        /* Company/Legal Pages */
+        .page-content { display: none; max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .page-content.active { display: block; }
+        .page-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-gray); text-decoration: none; margin-bottom: 2rem; cursor: pointer; font-size: 0.95rem; }
+        .page-back:hover { color: var(--primary); }
+        .page-title { font-family: 'Noto Serif SC', serif; font-size: 2.25rem; font-weight: 700; color: var(--primary); margin-bottom: 2rem; }
+        .page-body { font-size: 1.05rem; line-height: 1.9; color: var(--text-dark); }
+        .page-body h2 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; }
+        .page-body h3 { font-size: 1.25rem; color: var(--primary); margin: 1.5rem 0 0.75rem; }
+        .page-body p { margin-bottom: 1rem; }
+        .page-body ul, .page-body ol { margin: 1rem 0; padding-left: 1.5rem; }
+        .page-body li { margin-bottom: 0.5rem; }
         
         /* Loading */
         .loading { display: flex; justify-content: center; align-items: center; min-height: 200px; color: var(--text-gray); }
         
         /* Mobile */
-        @media (max-width: 1024px) { .featured-section { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 1024px) { .featured-section { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr 1fr; } .subscription-inner { grid-template-columns: 1fr; } }
         @media (max-width: 768px) { 
             .hero h1 { font-size: 2rem; } 
             .hero-stats { flex-wrap: wrap; gap: 1.5rem; } 
@@ -180,9 +219,10 @@
             .footer-inner { grid-template-columns: 1fr; } 
             .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
             .header-inner { flex-wrap: wrap; gap: 1rem; }
-            .header-contact { order: 3; width: 100%; justify-content: center; }
+            .header-actions { order: 3; width: 100%; justify-content: center; }
             .article-detail-title { font-size: 1.75rem; }
             .article-detail-image { height: 250px; }
+            .subscription-plans { flex-direction: column; }
         }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .article-card { opacity: 0; animation: fadeInUp 0.6s ease forwards; }
@@ -195,18 +235,16 @@
     <!-- Header -->
     <header>
         <div class="header-inner">
-            <div class="logo" onclick="showHome()">
+            <div class="logo" onclick="showPage('home')">
                 <div class="logo-icon">ALI</div>
                 <div class="logo-text">Asia Leasing <span>Insider</span></div>
             </div>
-            <div class="header-contact">
-                <div class="header-email">
-                    📧 联系我们: <a href="mailto:sufehcl@163.com">sufehcl@163.com</a>
+            <div class="header-actions">
+                <button class="subscribe-btn" onclick="showSubscription()" data-en="Subscribe" data-zh="订阅">订阅</button>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="zh">中文</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
                 </div>
-            </div>
-            <div class="lang-switch">
-                <button class="lang-btn active" data-lang="zh">中文</button>
-                <button class="lang-btn" data-lang="en">EN</button>
             </div>
         </div>
     </header>
@@ -214,7 +252,7 @@
     <!-- Navigation -->
     <nav id="main-nav">
         <div class="nav-inner">
-            <a class="nav-link active" data-en="Home" data-zh="首页" onclick="showHome()">首页</a>
+            <a class="nav-link active" data-en="Home" data-zh="首页" onclick="showPage('home')">首页</a>
             <a href="#weekly" class="nav-link" data-en="Weekly Report" data-zh="行业周报">行业周报</a>
             <a href="#analysis" class="nav-link" data-en="Market Analysis" data-zh="市场分析">市场分析</a>
             <a href="#cases" class="nav-link" data-en="Case Studies" data-zh="案例拆解">案例拆解</a>
@@ -229,7 +267,7 @@
             <div class="hero-inner">
                 <div class="hero-badge"><span data-en="Live Updates" data-zh="实时更新">实时更新</span></div>
                 <h1 data-en="Asia Pacific Equipment Finance & Leasing Insights" data-zh="亚太区设备融资租赁行业洞察">亚太区设备融资租赁行业洞察</h1>
-                <p class="hero-subtitle" data-en="Professional insights for leasing executives, cross-border financing managers, and investors in the Asia-Pacific region." data-zh="为融资租赁公司高管、跨境融资经理及投资人提供专业洞察">为融资租赁公司高管、跨境融资经理及投资人提供专业洞察</p>
+                <p class="hero-subtitle" data-en="Connecting global capital with Asia-Pacific opportunities. We provide comprehensive intelligence on equipment financing, cross-border deals, and emerging market trends for leasing companies, banks, investors, and industry stakeholders." data-zh="连接全球资本与亚太机遇。我们为租赁公司、银行、投资人及行业参与者提供设备融资、跨境交易及新兴市场趋势的综合情报。">连接全球资本与亚太机遇。我们为租赁公司、银行、投资人及行业参与者提供设备融资、跨境交易及新兴市场趋势的综合情报。</p>
                 <div class="hero-stats" id="hero-stats"></div>
             </div>
         </section>
@@ -238,7 +276,7 @@
         <main>
             <!-- Featured Section -->
             <section class="featured-section">
-                <div class="featured-main" id="featured-article" onclick="showArticleDetail(siteData.weekly[0])"></div>
+                <div class="featured-main" id="featured-article" onclick="showArticle(siteData.weekly[0])"></div>
                 <aside class="sidebar">
                     <div class="sidebar-card">
                         <div class="sidebar-title" data-en="Quick Access" data-zh="快速入口">快速入口</div>
@@ -250,27 +288,57 @@
                 </aside>
             </section>
 
+            <!-- Subscription Plans -->
+            <section class="subscription-section" id="subscription">
+                <div class="subscription-inner">
+                    <div class="subscription-info">
+                        <h3 data-en="Choose Your Plan" data-zh="选择您的订阅计划">选择您的订阅计划</h3>
+                        <p data-en="Get the insights you need to stay ahead in the Asia-Pacific leasing industry." data-zh="获取您需要的洞察，在亚太租赁行业保持领先。">获取您需要的洞察，在亚太租赁行业保持领先。</p>
+                        <ul class="subscription-features">
+                            <li data-en="Weekly industry reports and deal roundups" data-zh="每周行业报告和交易综述">每周行业报告和交易综述</li>
+                            <li data-en="In-depth market analysis and forecasts" data-zh="深度市场分析和预测">深度市场分析和预测</li>
+                            <li data-en="Exclusive case studies and transaction structures" data-zh="独家案例研究和交易结构">独家案例研究和交易结构</li>
+                            <li data-en="Regulatory updates and compliance insights" data-zh="监管更新和合规见解">监管更新和合规见解</li>
+                        </ul>
+                    </div>
+                    <div class="subscription-plans">
+                        <div class="subscription-plan" onclick="subscribeFree()">
+                            <div class="plan-name" data-en="Free" data-zh="免费">免费</div>
+                            <div class="plan-price">¥0</div>
+                            <div class="plan-desc" data-en="Weekly digest" data-zh="每周简报">每周简报</div>
+                            <button class="plan-btn plan-btn-free" data-en="Subscribe Free" data-zh="免费订阅">免费订阅</button>
+                        </div>
+                        <div class="subscription-plan featured" onclick="subscribePro()">
+                            <div class="plan-name" data-en="Professional" data-zh="专业版">专业版</div>
+                            <div class="plan-price">¥699<span style="font-size:0.9rem">/</span><span style="font-size:0.9rem" data-en="year" data-zh="年">年</span></div>
+                            <div class="plan-desc" data-en="$99 USD also available" data-zh="$99美元亦可">$99美元亦可</div>
+                            <button class="plan-btn plan-btn-pro" data-en="Subscribe Now" data-zh="立即订阅">立即订阅</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Weekly Report -->
             <section id="weekly">
-                <div class="section-header"><h2 class="section-title" data-en="Weekly Report" data-zh="行业周报">行业周报</h2><a class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a></div>
+                <div class="section-header"><h2 class="section-title" data-en="Weekly Report" data-zh="行业周报">行业周报</h2></div>
                 <div class="article-grid" id="weekly-grid"></div>
             </section>
 
             <!-- Market Analysis -->
             <section id="analysis">
-                <div class="section-header"><h2 class="section-title" data-en="Market Analysis" data-zh="市场分析">市场分析</h2><a class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a></div>
+                <div class="section-header"><h2 class="section-title" data-en="Market Analysis" data-zh="市场分析">市场分析</h2></div>
                 <div class="article-grid" id="analysis-grid"></div>
             </section>
 
             <!-- Case Studies -->
             <section id="cases">
-                <div class="section-header"><h2 class="section-title" data-en="Case Studies" data-zh="案例拆解">案例拆解</h2><a class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a></div>
+                <div class="section-header"><h2 class="section-title" data-en="Case Studies" data-zh="案例拆解">案例拆解</h2></div>
                 <div class="article-grid" id="cases-grid"></div>
             </section>
 
             <!-- Regulatory -->
             <section id="regulation">
-                <div class="section-header"><h2 class="section-title" data-en="Regulatory Updates" data-zh="监管动态">监管动态</h2><a class="view-all" data-en="View All →" data-zh="查看全部 →">查看全部 →</a></div>
+                <div class="section-header"><h2 class="section-title" data-en="Regulatory Updates" data-zh="监管动态">监管动态</h2></div>
                 <div class="article-grid" id="regulation-grid"></div>
             </section>
 
@@ -278,7 +346,7 @@
             <section class="newsletter">
                 <h3 data-en="Subscribe to Our Newsletter" data-zh="订阅我们的周报">订阅我们的周报</h3>
                 <p data-en="Get weekly insights on Asia-Pacific leasing industry delivered to your inbox." data-zh="每周获取亚太区租赁行业洞察，直接发送到您的邮箱。">每周获取亚太区租赁行业洞察，直接发送到您的邮箱。</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！');">
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！我们将每周为您发送行业动态。');">
                     <input type="email" class="newsletter-input" placeholder="您的邮箱地址" required>
                     <button type="submit" class="newsletter-btn" data-en="Subscribe" data-zh="订阅">订阅</button>
                 </form>
@@ -288,8 +356,22 @@
 
     <!-- Article Detail Page -->
     <div id="article-detail" class="article-detail">
-        <a class="article-detail-back" onclick="showHome()">← <span data-en="Back to Home" data-zh="返回首页">返回首页</span></a>
+        <a class="article-detail-back" onclick="showPage('home')">← <span data-en="Back to Home" data-zh="返回首页">返回首页</span></a>
         <div id="article-detail-content"></div>
+    </div>
+
+    <!-- Company Page -->
+    <div id="company-page" class="page-content">
+        <a class="page-back" onclick="showPage('home')">← <span data-en="Back to Home" data-zh="返回首页">返回首页</span></a>
+        <h1 class="page-title" data-en="About Us" data-zh="关于我们">关于我们</h1>
+        <div id="company-content" class="page-body"></div>
+    </div>
+
+    <!-- Legal Page -->
+    <div id="legal-page" class="page-content">
+        <a class="page-back" onclick="showPage('home')">← <span data-en="Back to Home" data-zh="返回首页">返回首页</span></a>
+        <h1 class="page-title" data-en="Legal" data-zh="法律信息">法律信息</h1>
+        <div id="legal-content" class="page-body"></div>
     </div>
 
     <!-- Footer -->
@@ -302,13 +384,13 @@
                     <div class="footer-contact-item">📧 邮箱: <a href="mailto:sufehcl@163.com">sufehcl@163.com</a></div>
                 </div>
             </div>
-            <div><div class="footer-title" data-en="Content" data-zh="内容">内容</div><ul class="footer-links"><li><a href="#weekly" data-en="Weekly Report" data-zh="行业周报">行业周报</a></li><li><a href="#analysis" data-en="Market Analysis" data-zh="市场分析">市场分析</a></li><li><a href="#cases" data-en="Case Studies" data-zh="案例拆解">案例拆解</a></li><li><a href="#regulation" data-en="Regulatory Updates" data-zh="监管动态">监管动态</a></li></ul></div>
-            <div><div class="footer-title" data-en="Company" data-zh="公司">公司</div><ul class="footer-links"><li><a href="#" data-en="About Us" data-zh="关于我们">关于我们</a></li><li><a href="#" data-en="Contact" data-zh="联系我们">联系我们</a></li><li><a href="#" data-en="Advertise" data-zh="广告合作">广告合作</a></li><li><a href="#" data-en="Careers" data-zh="加入我们">加入我们</a></li></ul></div>
-            <div><div class="footer-title" data-en="Legal" data-zh="法律">法律</div><ul class="footer-links"><li><a href="#" data-en="Privacy Policy" data-zh="隐私政策">隐私政策</a></li><li><a href="#" data-en="Terms of Service" data-zh="服务条款">服务条款</a></li><li><a href="#" data-en="Disclaimer" data-zh="免责声明">免责声明</a></li></ul></div>
+            <div><div class="footer-title" data-en="Content" data-zh="内容">内容</div><ul class="footer-links"><li><a onclick="scrollToSection('weekly')" data-en="Weekly Report" data-zh="行业周报">行业周报</a></li><li><a onclick="scrollToSection('analysis')" data-en="Market Analysis" data-zh="市场分析">市场分析</a></li><li><a onclick="scrollToSection('cases')" data-en="Case Studies" data-zh="案例拆解">案例拆解</a></li><li><a onclick="scrollToSection('regulation')" data-en="Regulatory Updates" data-zh="监管动态">监管动态</a></li></ul></div>
+            <div><div class="footer-title" data-en="Company" data-zh="公司">公司</div><ul class="footer-links"><li><a onclick="showPage('company')" data-en="About Us" data-zh="关于我们">关于我们</a></li><li><a href="mailto:sufehcl@163.com" data-en="Contact" data-zh="联系我们">联系我们</a></li></ul></div>
+            <div><div class="footer-title" data-en="Legal" data-zh="法律">法律</div><ul class="footer-links"><li><a onclick="showPage('legal')" data-en="Privacy Policy" data-zh="隐私政策">隐私政策</a></li><li><a onclick="showPage('legal')" data-en="Terms of Service" data-zh="服务条款">服务条款</a></li><li><a onclick="showPage('legal')" data-en="Disclaimer" data-zh="免责声明">免责声明</a></li></ul></div>
         </div>
         <div class="footer-bottom">
             <div class="footer-disclaimer" data-zh="本平台所有内容仅供信息参考，不构成任何投资建议。投资有风险，决策需谨慎。数据来源：Bloomberg, Dealogic, 公司公告, 各国监管机构公开信息" data-en="All content is for information only and does not constitute investment advice. Data sources: Bloomberg, Dealogic, company announcements, regulatory bodies.">本平台所有内容仅供信息参考，不构成任何投资建议。投资有风险，决策需谨慎。数据来源：Bloomberg, Dealogic, 公司公告, 各国监管机构公开信息</div>
-            <span>© 2024 Asia Leasing Insider. All rights reserved.</span>
+            <span>© 2025 Asia Leasing Insider. All rights reserved.</span>
             <div class="social-links"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">in</a><a href="#" class="social-link">📱</a></div>
         </div>
     </footer>
@@ -316,6 +398,7 @@
     <script>
         let siteData = null;
         let currentLang = 'zh';
+        let userSubscription = localStorage.getItem('subscription') || 'free';
 
         // Load data from JSON file
         async function loadData() {
@@ -338,6 +421,8 @@
             renderHeroStats();
             renderFeatured();
             renderArticles();
+            renderCompanyPage();
+            renderLegalPage();
         }
 
         function renderHeroStats() {
@@ -355,7 +440,7 @@
             const featured = siteData.weekly[0];
             container.innerHTML = `
                 <div class="featured-image" style="background-image: url('${featured.image}')"></div>
-                <div class="featured-content"><span class="featured-label" data-en="Featured" data-zh="精选">精选</span><h2 class="featured-title">${featured.title[currentLang]}</h2><p class="featured-excerpt">${featured.excerpt[currentLang]}</p></div>
+                <div class="featured-content"><span class="featured-label">${featured.isFree ? (currentLang === 'zh' ? '免费' : 'Free') : (currentLang === 'zh' ? '专业' : 'Pro')}</span><h2 class="featured-title">${featured.title[currentLang]}</h2><p class="featured-excerpt">${featured.excerpt[currentLang]}</p></div>
             `;
         }
 
@@ -372,8 +457,13 @@
                 if (!grid || !siteData[section.key]) return;
 
                 grid.innerHTML = siteData[section.key].map(article => `
-                    <article class="article-card" onclick="showArticleDetail(${JSON.stringify(article).replace(/"/g, '&quot;')})">
-                        <div class="article-image" style="background-image: url('${article.image}')"><span class="article-category">${article.category[currentLang]}</span></div>
+                    <article class="article-card" onclick="showArticle(${JSON.stringify(article).replace(/"/g, '&quot;')})">
+                        <div class="article-image" style="background-image: url('${article.image}')">
+                            <div class="article-badge">
+                                <span class="article-category">${article.category[currentLang]}</span>
+                                ${!article.isFree ? '<span class="article-premium">' + (currentLang === 'zh' ? '专业' : 'Pro') + '</span>' : ''}
+                            </div>
+                        </div>
                         <div class="article-content">
                             <div class="article-meta"><span class="article-date">📅 ${formatDate(article.date, currentLang)}</span></div>
                             <h3 class="article-title">${article.title[currentLang]}</h3>
@@ -386,11 +476,42 @@
             });
         }
 
-        function showArticleDetail(article) {
+        function renderCompanyPage() {
+            const container = document.getElementById('company-content');
+            if (siteData.company && siteData.company.about) {
+                container.innerHTML = siteData.company.about[currentLang];
+            }
+        }
+
+        function renderLegalPage() {
+            const container = document.getElementById('legal-content');
+            if (siteData.company && siteData.company.legal) {
+                container.innerHTML = siteData.company.legal[currentLang];
+            }
+        }
+
+        function showArticle(article) {
+            // Check if article requires subscription
+            if (!article.isFree && userSubscription !== 'pro') {
+                showSubscription();
+                return;
+            }
+
             const detailContent = document.getElementById('article-detail-content');
             const homePage = document.getElementById('home-page');
             const articleDetail = document.getElementById('article-detail');
             const nav = document.getElementById('main-nav');
+            const companyPage = document.getElementById('company-page');
+            const legalPage = document.getElementById('legal-page');
+            const subscriptionSection = document.getElementById('subscription');
+            
+            // Hide all sections first
+            homePage.style.display = 'none';
+            articleDetail.classList.remove('active');
+            companyPage.classList.remove('active');
+            legalPage.classList.remove('active');
+            subscriptionSection.style.display = 'none';
+            nav.style.display = 'none';
             
             detailContent.innerHTML = `
                 <div class="article-detail-header">
@@ -412,21 +533,63 @@
                 </div>
             `;
             
-            homePage.style.display = 'none';
             articleDetail.classList.add('active');
-            nav.style.display = 'none';
             window.scrollTo(0, 0);
         }
 
-        function showHome() {
+        function showPage(page) {
             const homePage = document.getElementById('home-page');
             const articleDetail = document.getElementById('article-detail');
+            const companyPage = document.getElementById('company-page');
+            const legalPage = document.getElementById('legal-page');
             const nav = document.getElementById('main-nav');
+            const subscriptionSection = document.getElementById('subscription');
             
-            homePage.style.display = 'block';
+            homePage.style.display = 'none';
             articleDetail.classList.remove('active');
-            nav.style.display = 'block';
+            companyPage.classList.remove('active');
+            legalPage.classList.remove('active');
+            subscriptionSection.style.display = 'none';
+            
+            if (page === 'home') {
+                homePage.style.display = 'block';
+                subscriptionSection.style.display = 'block';
+                nav.style.display = 'block';
+            } else if (page === 'company') {
+                companyPage.classList.add('active');
+            } else if (page === 'legal') {
+                legalPage.classList.add('active');
+            }
+            
             window.scrollTo(0, 0);
+        }
+
+        function showSubscription() {
+            const subscriptionSection = document.getElementById('subscription');
+            subscriptionSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function subscribeFree() {
+            userSubscription = 'free';
+            localStorage.setItem('subscription', 'free');
+            alert(currentLang === 'zh' ? '免费订阅成功！您现在可以查看免费内容。' : 'Free subscription successful! You can now access free content.');
+        }
+
+        function subscribePro() {
+            const email = prompt(currentLang === 'zh' ? '请输入您的邮箱地址以完成订阅：' : 'Please enter your email address to subscribe:');
+            if (email) {
+                // In a real application, this would send to a payment processor
+                userSubscription = 'pro';
+                localStorage.setItem('subscription', 'pro');
+                alert(currentLang === 'zh' ? '感谢订阅专业版！您现在可以访问所有内容。\n\n订阅确认已发送至：' + email + '\n\n如需付款，请联系：sufehcl@163.com' : 'Thank you for subscribing to Professional! You now have access to all content.\n\nConfirmation sent to: ' + email + '\n\nFor payment, please contact: sufehcl@163.com');
+            }
         }
 
         function switchLanguage(lang) {
@@ -435,26 +598,12 @@
             document.querySelectorAll('[data-en][data-zh]').forEach(el => el.textContent = el.dataset[lang]);
             document.querySelectorAll('[data-zh-placeholder]').forEach(el => el.placeholder = el.dataset.zhPlaceholder);
             if (siteData) renderAll();
-            
-            // Re-render article detail if active
-            const articleDetail = document.getElementById('article-detail');
-            if (articleDetail.classList.contains('active') && window.currentArticle) {
-                showArticleDetail(window.currentArticle);
-            }
         }
 
         // Event Listeners
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
         });
-
-        // Store current article for language switch
-        window.currentArticle = null;
-        const originalShowArticleDetail = showArticleDetail;
-        window.showArticleDetail = function(article) {
-            window.currentArticle = article;
-            originalShowArticleDetail(article);
-        };
 
         // Initial load
         loadData();
