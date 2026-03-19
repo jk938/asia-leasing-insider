@@ -3,9 +3,9 @@ const projectDir = 'c:/Users/Jackie/WorkBuddy/20260318114807';
 
 try {
   execSync('git add -A', { cwd: projectDir, stdio: 'inherit' });
-  execSync('git commit -m "Update vercel config"', { cwd: projectDir, stdio: 'inherit' });
+  execSync('git commit -m "Fix: include all files in deployment"', { cwd: projectDir, stdio: 'inherit' });
   execSync('git push origin main', { cwd: projectDir, stdio: 'inherit' });
-  console.log('Done!');
+  console.log('Pushed!');
 } catch (err) {
-  console.error('Error:', err.message);
+  console.error(err.message);
 }
