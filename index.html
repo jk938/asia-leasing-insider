@@ -404,10 +404,26 @@
         async function loadData() {
             try {
                 const response = await fetch('./data/articles.json');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
                 siteData = await response.json();
                 renderAll();
             } catch (err) {
                 console.error('Failed to load data:', err);
+                // 显示错误提示和后备内容
+                document.getElementById('home-page').innerHTML = `
+                    <div style="padding: 40px; text-align: center; max-width: 600px; margin: 0 auto;">
+                        <h2 style="color: #1A365D; margin-bottom: 1rem;">正在加载内容...</h2>
+                        <p style="color: #4A5568;">如果页面长时间未更新，请尝试：</p>
+                        <ul style="text-align: left; margin-top: 1rem; color: #4A5568;">
+                            <li>清除浏览器缓存后刷新页面</li>
+                            <li>使用隐私/无痕模式打开</li>
+                            <li>等待1-2分钟后重新访问</li>
+                        </ul>
+                        <p style="margin-top: 2rem; color: #718096;">如问题持续，请联系：sufehcl@163.com</p>
+                    </div>
+                `;
             }
         }
 
@@ -605,8 +621,21 @@
             btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
         });
 
-        // Initial load
-        loadData();
+        // Initial load - 确保首页可见
+        function init() {
+            const homePage = document.getElementById('home-page');
+            if (homePage) {
+                homePage.style.display = 'block';
+            }
+            loadData();
+        }
+        
+        // 确保DOM加载完成后初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
     </script>
 </body>
 </html>
