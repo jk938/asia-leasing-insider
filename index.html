@@ -650,6 +650,7 @@
         // 等待DOM完全加载后再渲染
         function renderContent() {
             var siteData = window.SITE_DATA;
+            console.log('Rendering content, siteData:', !!siteData);
             if (!siteData) {
                 document.getElementById('home-page').innerHTML = '<p style="padding:40px;text-align:center;">数据加载失败</p>';
                 return;
@@ -677,9 +678,21 @@
                 { key: 'regulation', gridId: 'regulation-grid' }
             ];
             
+            console.log('Rendering sections:', sections.map(s => s.key));
+            
             sections.forEach(function(sec) {
+                console.log('Processing section:', sec.key, 'data exists:', !!siteData[sec.key]);
                 var grid = document.getElementById(sec.gridId);
-                if (!grid || !siteData[sec.key]) return;
+                console.log('Grid element:', !!grid);
+                if (!grid) {
+                    console.error('Grid not found:', sec.gridId);
+                    return;
+                }
+                if (!siteData[sec.key]) {
+                    console.error('Data not found for:', sec.key);
+                    grid.innerHTML = '<p>No data for ' + sec.key + '</p>';
+                    return;
+                }
                 
                 var html = '';
                 siteData[sec.key].forEach(function(article) {
