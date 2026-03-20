@@ -709,23 +709,36 @@
             grid.innerHTML = html;
         }
         
-        // 等待DOM完全加载后再渲染
+        // 主渲染函数
         function renderContent() {
             console.log('renderContent called');
+            
+            // 检查SITE_DATA
             var siteData = window.SITE_DATA;
+            console.log('siteData exists:', !!siteData);
+            
             if (!siteData) {
-                document.getElementById('home-page').innerHTML = '<p style="padding:40px;text-align:center;">数据加载失败</p>';
+                console.error('SITE_DATA not found!');
+                document.getElementById('hero-stats').innerHTML = '<p style="color:red;padding:20px;">错误: 数据未加载</p>';
                 return;
             }
+            
+            console.log('Starting render...');
             
             // 分别渲染每个部分
             try {
                 renderStats();
+                console.log('Stats rendered');
                 renderFeatured();
+                console.log('Featured rendered');
                 renderSection('weekly', 'weekly-grid');
+                console.log('Weekly rendered');
                 renderSection('analysis', 'analysis-grid');
+                console.log('Analysis rendered');
                 renderSection('cases', 'cases-grid');
+                console.log('Cases rendered');
                 renderSection('regulation', 'regulation-grid');
+                console.log('Regulation rendered');
                 
                 // 渲染公司页面
                 if (siteData.company && siteData.company.about) {
@@ -733,6 +746,7 @@
                 }
             } catch (e) {
                 console.error('Render error:', e);
+                alert('渲染错误: ' + e.message);
             }
         }
 
