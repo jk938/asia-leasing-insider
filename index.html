@@ -621,21 +621,9 @@
             btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
         });
 
-        // Initial load - 确保首页可见
-        function init() {
-            const homePage = document.getElementById('home-page');
-            if (homePage) {
-                homePage.style.display = 'block';
-            }
-            loadData();
-        }
-        
-        // 确保DOM加载完成后初始化
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
-        } else {
-            init();
-        }
+        // 直接渲染，不等待
+        console.log('Direct render, siteData:', siteData);
+        if (siteData) renderAll();
     </script>
 </body>
 </html>
