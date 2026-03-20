@@ -422,6 +422,37 @@
             return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         }
 
+        // 根据ID查找文章
+        function findById(id) {
+            var all = [].concat(siteData.weekly || [], siteData.analysis || [], siteData.cases || [], siteData.regulation || []);
+            for (var i = 0; i < all.length; i++) {
+                if (all[i].id === id) return all[i];
+            }
+            return null;
+        }
+        
+        // 显示文章详情
+        function showArticle(id) {
+            var article = findById(id);
+            if (!article) return;
+            
+            if (!article.isFree && userSubscription !== 'pro') {
+                alert('请订阅专业版查看此内容');
+                return;
+            }
+            
+            var html = '<div style="max-width:800px;margin:0 auto;padding:2rem;">';
+            html += '<button onclick="document.getElementById(\'article-detail\').style.display=\'none\';document.getElementById(\'home-page\').style.display=\'block\';" style="padding:8px 16px;margin-bottom:20px;cursor:pointer;">← 返回</button>';
+            html += '<h1 style="color:#1A365D;margin-bottom:1rem;">' + article.title[currentLang] + '</h1>';
+            html += '<p style="color:#718096;margin-bottom:2rem;">📅 ' + article.date + ' | 👤 ' + article.author + '</p>';
+            html += article.content[currentLang] || article.content.zh || '';
+            html += '</div>';
+            
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('article-detail').style.display = 'block';
+            document.getElementById('article-detail-content').innerHTML = html;
+        }
+
         function renderAll() {
             renderHeroStats();
             renderFeatured();
@@ -616,18 +647,63 @@
             if (siteData) renderAll();
         }
 
-        // Event Listeners
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
-        });
-
-        // 调试：确认数据加载
-        alert('siteData loaded: ' + (siteData ? 'YES' : 'NO'));
-        console.log('siteData:', siteData);
-        if (siteData) {
-            renderAll();
-            alert('renderAll called');
-        }
+        // 直接渲染所有内容
+        (function() {
+            if (!siteData) {
+                document.getElementById('home-page').innerHTML = '<p style="padding:40px;text-align:center;">数据加载失败</p>';
+                return;
+            }
+            
+            // 渲染统计
+            document.getElementById('hero-stats').innerHTML = 
+                '<div class="stat-item"><div class="stat-number">' + siteData.stats.weeklyTransactions + '</div><div class="stat-label">每周交易</div></div>' +
+                '<div class="stat-item"><div class="stat-number">' + siteData.stats.marketsCovered + '</div><div class="stat-label">覆盖市场</div></div>' +
+                '<div class="stat-item"><div class="stat-number">' + siteData.stats.industryReaders + '</div><div class="stat-label">行业读者</div></div>';
+            
+            // 渲染精选文章
+            var featured = siteData.weekly[0];
+            document.getElementById('featured-article').innerHTML = 
+                '<div class="featured-image" style="background-image:url(\''+featured.image+'\')"></div>' +
+                '<div class="featured-content"><span class="featured-label">精选</span><h2 class="featured-title">'+featured.title[currentLang]+'</h2><p class="featured-excerpt">'+featured.excerpt[currentLang]+'</p></div>';
+            
+            // 渲染4个板块
+            var sections = [
+                { key: 'weekly', gridId: 'weekly-grid' },
+                { key: 'analysis', gridId: 'analysis-grid' },
+                { key: 'cases', gridId: 'cases-grid' },
+                { key: 'regulation', gridId: 'regulation-grid' }
+            ];
+            
+            sections.forEach(function(sec) {
+                var grid = document.getElementById(sec.gridId);
+                if (!grid || !siteData[sec.key]) return;
+                
+                var html = '';
+                siteData[sec.key].forEach(function(article) {
+                    var premiumBadge = article.isFree ? 
+                        '<span class="article-premium" style="background:#48BB78">免费</span>' : 
+                        '<span class="article-premium">专业</span>';
+                    
+                    html += '<article class="article-card" onclick="showArticle(\''+article.id+'\')">' +
+                        '<div class="article-image" style="background-image:url(\''+article.image+'\')">' +
+                        '<div class="article-badge"><span class="article-category">'+article.category[currentLang]+'</span>'+premiumBadge+'</div>' +
+                        '</div>' +
+                        '<div class="article-content">' +
+                        '<div class="article-meta"><span class="article-date">📅 '+article.date+'</span></div>' +
+                        '<h3 class="article-title">'+article.title[currentLang]+'</h3>' +
+                        '<p class="article-excerpt">'+article.excerpt[currentLang]+'</p>' +
+                        '<div class="article-tags">' + article.tags.map(function(t){return '<span class="tag">'+t+'</span>'}).join('') + '</div>' +
+                        '<div class="article-source">📑 来源: '+article.source+'</div>' +
+                        '</div></article>';
+                });
+                grid.innerHTML = html;
+            });
+            
+            // 渲染公司页面
+            if (siteData.company && siteData.company.about) {
+                document.getElementById('company-content').innerHTML = siteData.company.about[currentLang];
+            }
+        })();
     </script>
 </body>
 </html>
