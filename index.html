@@ -621,9 +621,13 @@
             btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
         });
 
-        // 直接渲染，不等待
-        console.log('Direct render, siteData:', siteData);
-        if (siteData) renderAll();
+        // 调试：确认数据加载
+        alert('siteData loaded: ' + (siteData ? 'YES' : 'NO'));
+        console.log('siteData:', siteData);
+        if (siteData) {
+            renderAll();
+            alert('renderAll called');
+        }
     </script>
 </body>
 </html>
