@@ -647,77 +647,92 @@
             if (siteData) renderAll();
         }
 
-        // 等待DOM完全加载后再渲染
-        function renderContent() {
+        // 渲染函数 - 分离每个板块的渲染
+        function renderStats() {
             var siteData = window.SITE_DATA;
-            console.log('Rendering content, siteData:', !!siteData);
-            if (!siteData) {
-                document.getElementById('home-page').innerHTML = '<p style="padding:40px;text-align:center;">数据加载失败</p>';
-                return;
-            }
-            
-            // 渲染统计
+            if (!siteData || !siteData.stats) return;
             document.getElementById('hero-stats').innerHTML = 
                 '<div class="stat-item"><div class="stat-number">' + siteData.stats.weeklyTransactions + '</div><div class="stat-label">每周交易</div></div>' +
                 '<div class="stat-item"><div class="stat-number">' + siteData.stats.marketsCovered + '</div><div class="stat-label">覆盖市场</div></div>' +
                 '<div class="stat-item"><div class="stat-number">' + siteData.stats.industryReaders + '</div><div class="stat-label">行业读者</div></div>';
-            
-            // 渲染精选文章
+        }
+        
+        function renderFeatured() {
+            var siteData = window.SITE_DATA;
+            if (!siteData || !siteData.weekly || !siteData.weekly[0]) return;
             var featured = siteData.weekly[0];
             var featuredEl = document.getElementById('featured-article');
             featuredEl.innerHTML = 
                 '<div class="featured-image" style="background-image:url(\''+featured.image+'\')"></div>' +
                 '<div class="featured-content"><span class="featured-label">精选</span><h2 class="featured-title">'+featured.title[currentLang]+'</h2><p class="featured-excerpt">'+featured.excerpt[currentLang]+'</p></div>';
             featuredEl.onclick = function() { showArticleById(featured.id); };
+        }
+        
+        function renderSection(key, gridId) {
+            var siteData = window.SITE_DATA;
+            var grid = document.getElementById(gridId);
+            if (!grid) {
+                console.error('Grid not found:', gridId);
+                return;
+            }
+            if (!siteData || !siteData[key] || !siteData[key].length) {
+                console.log('No data for:', key);
+                grid.innerHTML = '<p style="padding:20px;color:#999;">暂无数据</p>';
+                return;
+            }
             
-            // 渲染4个板块
-            var sections = [
-                { key: 'weekly', gridId: 'weekly-grid' },
-                { key: 'analysis', gridId: 'analysis-grid' },
-                { key: 'cases', gridId: 'cases-grid' },
-                { key: 'regulation', gridId: 'regulation-grid' }
-            ];
+            console.log('Rendering section:', key, 'with', siteData[key].length, 'articles');
             
-            console.log('Rendering sections:', sections.map(s => s.key));
-            
-            sections.forEach(function(sec) {
-                console.log('Processing section:', sec.key, 'data exists:', !!siteData[sec.key]);
-                var grid = document.getElementById(sec.gridId);
-                console.log('Grid element:', !!grid);
-                if (!grid) {
-                    console.error('Grid not found:', sec.gridId);
-                    return;
-                }
-                if (!siteData[sec.key]) {
-                    console.error('Data not found for:', sec.key);
-                    grid.innerHTML = '<p>No data for ' + sec.key + '</p>';
-                    return;
+            var html = '';
+            siteData[key].forEach(function(article) {
+                var premiumBadge = article.isFree ? 
+                    '<span class="article-premium" style="background:#48BB78">免费</span>' : 
+                    '<span class="article-premium">专业</span>';
+                
+                var tagsHtml = '';
+                if (article.tags && article.tags.length) {
+                    tagsHtml = '<div class="article-tags">' + article.tags.map(function(t){return '<span class="tag">'+t+'</span>'}).join('') + '</div>';
                 }
                 
-                var html = '';
-                siteData[sec.key].forEach(function(article) {
-                    var premiumBadge = article.isFree ? 
-                        '<span class="article-premium" style="background:#48BB78">免费</span>' : 
-                        '<span class="article-premium">专业</span>';
-                    
-                    html += '<article class="article-card" onclick="showArticleById(\''+article.id+'\')">' +
-                        '<div class="article-image" style="background-image:url(\''+article.image+'\')">' +
-                        '<div class="article-badge"><span class="article-category">'+article.category[currentLang]+'</span>'+premiumBadge+'</div>' +
-                        '</div>' +
-                        '<div class="article-content">' +
-                        '<div class="article-meta"><span class="article-date">📅 '+article.date+'</span></div>' +
-                        '<h3 class="article-title">'+article.title[currentLang]+'</h3>' +
-                        '<p class="article-excerpt">'+article.excerpt[currentLang]+'</p>' +
-                        '<div class="article-tags">' + article.tags.map(function(t){return '<span class="tag">'+t+'</span>'}).join('') + '</div>' +
-                        '<div class="article-source">📑 来源: '+article.source+'</div>' +
-                        '</div></article>';
-                });
-                grid.innerHTML = html;
+                html += '<article class="article-card" onclick="showArticleById(\''+article.id+'\')">' +
+                    '<div class="article-image" style="background-image:url(\''+article.image+'\')">' +
+                    '<div class="article-badge"><span class="article-category">'+article.category[currentLang]+'</span>'+premiumBadge+'</div>' +
+                    '</div>' +
+                    '<div class="article-content">' +
+                    '<div class="article-meta"><span class="article-date">📅 '+article.date+'</span></div>' +
+                    '<h3 class="article-title">'+article.title[currentLang]+'</h3>' +
+                    '<p class="article-excerpt">'+article.excerpt[currentLang]+'</p>' +
+                    tagsHtml +
+                    '<div class="article-source">📑 来源: '+article.source+'</div>' +
+                    '</div></article>';
             });
+            grid.innerHTML = html;
+        }
+        
+        // 等待DOM完全加载后再渲染
+        function renderContent() {
+            console.log('renderContent called');
+            var siteData = window.SITE_DATA;
+            if (!siteData) {
+                document.getElementById('home-page').innerHTML = '<p style="padding:40px;text-align:center;">数据加载失败</p>';
+                return;
+            }
             
-            // 渲染公司页面
-            if (siteData.company && siteData.company.about) {
-                document.getElementById('company-content').innerHTML = siteData.company.about[currentLang];
+            // 分别渲染每个部分
+            try {
+                renderStats();
+                renderFeatured();
+                renderSection('weekly', 'weekly-grid');
+                renderSection('analysis', 'analysis-grid');
+                renderSection('cases', 'cases-grid');
+                renderSection('regulation', 'regulation-grid');
+                
+                // 渲染公司页面
+                if (siteData.company && siteData.company.about) {
+                    document.getElementById('company-content').innerHTML = siteData.company.about[currentLang];
+                }
+            } catch (e) {
+                console.error('Render error:', e);
             }
         }
 
