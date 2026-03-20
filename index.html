@@ -647,8 +647,9 @@
             if (siteData) renderAll();
         }
 
-        // 直接渲染所有内容
-        (function() {
+        // 等待DOM完全加载后再渲染
+        function renderContent() {
+            var siteData = window.SITE_DATA;
             if (!siteData) {
                 document.getElementById('home-page').innerHTML = '<p style="padding:40px;text-align:center;">数据加载失败</p>';
                 return;
@@ -703,7 +704,14 @@
             if (siteData.company && siteData.company.about) {
                 document.getElementById('company-content').innerHTML = siteData.company.about[currentLang];
             }
-        })();
+        }
+
+        // 使用DOMContentLoaded确保DOM完全准备好
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', renderContent);
+        } else {
+            renderContent();
+        }
     </script>
 </body>
 </html>
