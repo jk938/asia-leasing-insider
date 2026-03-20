@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./data/site-data.js"></script>
     <style>
         :root {
             --primary: #1A365D;
@@ -276,7 +277,7 @@
         <main>
             <!-- Featured Section -->
             <section class="featured-section">
-                <div class="featured-main" id="featured-article" onclick="showArticle(siteData.weekly[0])"></div>
+                <div class="featured-main" id="featured-article" onclick="showArticleById(siteData.weekly[0].id)"></div>
                 <aside class="sidebar">
                     <div class="sidebar-card">
                         <div class="sidebar-title" data-en="Quick Access" data-zh="快速入口">快速入口</div>
@@ -396,35 +397,17 @@
     </footer>
 
     <script>
-        let siteData = null;
+        // 直接使用内联数据，无需fetch
+        let siteData = window.SITE_DATA || null;
         let currentLang = 'zh';
         let userSubscription = localStorage.getItem('subscription') || 'free';
 
-        // Load data from JSON file
-        async function loadData() {
-            try {
-                const response = await fetch('./data/articles.json');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-                siteData = await response.json();
-                renderAll();
-            } catch (err) {
-                console.error('Failed to load data:', err);
-                // 显示错误提示和后备内容
-                document.getElementById('home-page').innerHTML = `
-                    <div style="padding: 40px; text-align: center; max-width: 600px; margin: 0 auto;">
-                        <h2 style="color: #1A365D; margin-bottom: 1rem;">正在加载内容...</h2>
-                        <p style="color: #4A5568;">如果页面长时间未更新，请尝试：</p>
-                        <ul style="text-align: left; margin-top: 1rem; color: #4A5568;">
-                            <li>清除浏览器缓存后刷新页面</li>
-                            <li>使用隐私/无痕模式打开</li>
-                            <li>等待1-2分钟后重新访问</li>
-                        </ul>
-                        <p style="margin-top: 2rem; color: #718096;">如问题持续，请联系：sufehcl@163.com</p>
-                    </div>
-                `;
+        function loadData() {
+            if (!siteData) {
+                console.error('Site data not loaded');
+                return;
             }
+            renderAll();
         }
 
         function formatDate(dateStr, lang) {
@@ -473,11 +456,11 @@
                 if (!grid || !siteData[section.key]) return;
 
                 grid.innerHTML = siteData[section.key].map(article => `
-                    <article class="article-card" onclick="showArticle(${JSON.stringify(article).replace(/"/g, '&quot;')})">
+                    <article class="article-card" onclick="showArticleById('${article.id}')">
                         <div class="article-image" style="background-image: url('${article.image}')">
                             <div class="article-badge">
                                 <span class="article-category">${article.category[currentLang]}</span>
-                                ${!article.isFree ? '<span class="article-premium">' + (currentLang === 'zh' ? '专业' : 'Pro') + '</span>' : ''}
+                                ${!article.isFree ? '<span class="article-premium">' + (currentLang === 'zh' ? '专业' : 'Pro') + '</span>' : '<span class="article-premium" style="background:#48BB78">免费</span>'}
                             </div>
                         </div>
                         <div class="article-content">
@@ -490,6 +473,17 @@
                     </article>
                 `).join('');
             });
+        }
+
+        function findArticleById(id) {
+            const all = [...siteData.weekly, ...siteData.analysis, ...siteData.cases, ...siteData.regulation];
+            return all.find(a => a.id === id);
+        }
+
+        function showArticleById(id) {
+            const article = findArticleById(id);
+            if (!article) return;
+            showArticle(article);
         }
 
         function renderCompanyPage() {
