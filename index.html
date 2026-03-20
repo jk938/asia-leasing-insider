@@ -406,11 +406,14 @@
         let userSubscription = localStorage.getItem('subscription') || 'free';
 
         function loadData() {
+            console.log('Loading data, siteData:', siteData);
             if (!siteData) {
                 console.error('Site data not loaded');
                 return;
             }
+            console.log('Rendering all content...');
             renderAll();
+            console.log('Render complete');
         }
 
         function formatDate(dateStr, lang) {
