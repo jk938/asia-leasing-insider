@@ -270,6 +270,10 @@
         }
 
         document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => switchLanguage(btn.dataset.lang)));
+        
+        // 调试
+        alert('siteData: ' + (typeof siteData));
+        alert('weekly: ' + (siteData ? siteData.weekly.length : 'none'));
         renderAll();
     </script>
 </body>
