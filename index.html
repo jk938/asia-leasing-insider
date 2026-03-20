@@ -280,7 +280,7 @@
         <main>
             <!-- Featured Section -->
             <section class="featured-section">
-                <div class="featured-main" id="featured-article" onclick="showArticleById(siteData.weekly[0].id)"></div>
+                <div class="featured-main" id="featured-article"></div>
                 <aside class="sidebar">
                     <div class="sidebar-card">
                         <div class="sidebar-title" data-en="Quick Access" data-zh="快速入口">快速入口</div>
@@ -663,9 +663,11 @@
             
             // 渲染精选文章
             var featured = siteData.weekly[0];
-            document.getElementById('featured-article').innerHTML = 
+            var featuredEl = document.getElementById('featured-article');
+            featuredEl.innerHTML = 
                 '<div class="featured-image" style="background-image:url(\''+featured.image+'\')"></div>' +
                 '<div class="featured-content"><span class="featured-label">精选</span><h2 class="featured-title">'+featured.title[currentLang]+'</h2><p class="featured-excerpt">'+featured.excerpt[currentLang]+'</p></div>';
+            featuredEl.onclick = function() { showArticleById(featured.id); };
             
             // 渲染4个板块
             var sections = [
@@ -685,7 +687,7 @@
                         '<span class="article-premium" style="background:#48BB78">免费</span>' : 
                         '<span class="article-premium">专业</span>';
                     
-                    html += '<article class="article-card" onclick="showArticle(\''+article.id+'\')">' +
+                    html += '<article class="article-card" onclick="showArticleById(\''+article.id+'\')">' +
                         '<div class="article-image" style="background-image:url(\''+article.image+'\')">' +
                         '<div class="article-badge"><span class="article-category">'+article.category[currentLang]+'</span>'+premiumBadge+'</div>' +
                         '</div>' +
